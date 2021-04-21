@@ -68,8 +68,9 @@ email: "sahartma@wisc.edu"
 highlight_name: false
 ---
 
-Nelson Bighetti is a professor of artificial intelligence at the Stanford AI Lab. His research interests include distributed robotics, mobile computing and programmable matter. He leads the Robotic Neurobiology group, which develops self-reconfiguring robots, systems of self-organizing robots, and mobile sensor networks.
+Like many kids I loved dinosaurs, and growing up in Wisconsin and California I was exposed to many wonderful natural history museums. That interest, and a desire to be closer to Mesozoic rocks lead me to the University of Wyoming, where I graduated with a B.S. in Zoology. During that time I was fortunate to gain paleontological field & museum experience, and subsequently I found early career success managing research and display development at small museums. During this time I also pursued scientific illustration, and created a large catalog of anatomical diagrams of vertebrate skeletons (extinct and extant) - interested parties can explore that work at my personal website and blog: www.skeletaldrawing.com.
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed neque elit, tristique placerat feugiat ac, facilisis vitae arcu. Proin eget egestas augue. Praesent ut sem nec arcu pellentesque aliquet. Duis dapibus diam vel metus tempus vulputate.
+I loved the time I spent working at museums in the Mountain West, but helping manage research programs reawakened my desire to become a professional research scientist. I relocated from Wyoming to Wisconsin to pursue a geoscience Ph.D in paleobiology, with an emphasis on mechanistic physiological modeling, mass extinction survivorship, and functional anatomy. In my spare time I am a husband, father, pet-father, and enjoy movies, photography and PC gaming.
+
 
 {{< icon name="download" pack="fas" >}} Download my {{< staticref "media/demo_resume.pdf" "newtab" >}}resumé{{< /staticref >}}.
