@@ -24,7 +24,7 @@ date_format: Jan 2006
 experience:
   - title: Associate Professor
     company: University of Wisconsin-Madison
-    company_url: 'www.wisc.edu
+    company_url: 'www.wisc.edu'
     location: Wisconsin
     date_start: '2020-08-01'
     date_end: ''
