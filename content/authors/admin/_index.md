@@ -53,13 +53,9 @@ social:
 - icon: linkedin
   icon_pack: fab
   link: https://www.linkedin.com/in/scott-hartman-15146320/
-
-# Link to a PDF of your resume/CV.
-# copy your resume to `static/media/resume.pdf`, enable `ai` icons
-# and uncomment the lines below.
- - icon: cv
-   icon_pack: ai
-   link: media/resume.pdf
+- icon: cv
+  icon_pack: ai
+  link: media/resume.pdf
 
 # Enter email to display Gravatar (if Gravatar enabled in Config)
 email: "sahartman@wisc.edu"
