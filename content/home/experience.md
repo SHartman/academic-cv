@@ -35,7 +35,7 @@ experience:
         * Course development
         * Grant application
         
-   title: Scientific consultant & Illustrator
+  - title: Scientific consultant & Illustrator
     company: SkeletalDrawing.com
     company_url: 'www.skeletaldrawing.com'
     date_start: '2010-01-01'
