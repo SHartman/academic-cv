@@ -24,8 +24,7 @@ date_format: Jan 2006
 experience:
   - title: Associate Professor
     company: University of Wisconsin-Madison
-    company_url: 'www.wisc.edu'
-    company_logo: https://brand.wisc.edu/content/uploads/2016/11/uw-crest-color.png
+    company_url: 'www.wisc.edu
     location: Wisconsin
     date_start: '2020-08-01'
     date_end: ''
