@@ -30,13 +30,9 @@ address:
   country: United States
   country_code: US
 coordinates:
-  latitude: '43.07227318904817'
-  longitude: '-89.40436046931738'
+  latitude: '43.07227'
+  longitude: '-89.40436'
 directions: Enter Noland Hall take the stairs or elevator to Office 507 on Floor 5
-office_hours:
-  - 'Monday NA'
-  - 'Wednesday NA'
-appointment_url: 'https://calendly.com'
 contact_links:
   - icon: twitter
     icon_pack: fab
