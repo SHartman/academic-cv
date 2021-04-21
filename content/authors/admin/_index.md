@@ -55,7 +55,7 @@ social:
   link: https://www.linkedin.com/in/scott-hartman-15146320/
 
 # Link to a PDF of your resume/CV.
-# To use: copy your resume to `static/media/resume.pdf`, enable `ai` icons in `params.toml`, 
+# copy your resume to `static/media/resume.pdf`, enable `ai` icons
 # and uncomment the lines below.
  - icon: cv
    icon_pack: ai
