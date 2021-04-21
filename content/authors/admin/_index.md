@@ -6,7 +6,7 @@ title: Scott Hartman
 superuser: true
 
 # Role/position/tagline
-role: Assistant Professor
+role: Associate Professor of Anatomy & Physiology
 
 # Organizations/Affiliations to show in About widget
 organizations:
