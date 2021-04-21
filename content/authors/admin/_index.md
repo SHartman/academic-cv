@@ -44,8 +44,8 @@ social:
 - icon: twitter
   icon_pack: fab
   link: https://twitter.com/skeletaldrawing
-- icon: graduation-cap  # Alternatively, use `google-scholar` icon from `ai` icon pack
-  icon_pack: fas
+- icon: google-scholar
+  icon_pack: ai
   link: https://scholar.google.com/citations?user=C28Tm0QAAAAJ&hl=en&oi=ao
 - icon: github
   icon_pack: fab
@@ -68,9 +68,9 @@ email: "sahartma@wisc.edu"
 highlight_name: false
 ---
 
-Like many kids I loved dinosaurs, and growing up in Wisconsin and California I was exposed to many wonderful natural history museums. That interest, and a desire to be closer to Mesozoic rocks lead me to the University of Wyoming, where I graduated with a B.S. in Zoology. During that time I was fortunate to gain paleontological field & museum experience, and subsequently I found early career success managing research and display development at small museums. During this time I also pursued scientific illustration, and created a large catalog of anatomical diagrams of vertebrate skeletons (extinct and extant) - interested parties can explore that work at my personal website and blog: www.skeletaldrawing.com.
+I grew up loving dinosaurs and natural history, and a desire to be closer to Mesozoic rocks lead me from California to the University of Wyoming, where I graduated with a B.S. in Zoology. During that time I gain field & museum experience in paleontology, and subsequently I went on to manage research and display development at The Wyoming Dinosaur Museum in Thermopolis, WY. During this time I also pursued an independent scientific illustration career, resulting in a large catalog of skeletal anatomy diagrams - interested parties can explore that work at: www.skeletaldrawing.com.
 
-I loved the time I spent working at museums in the Mountain West, but helping manage research programs reawakened my desire to become a professional research scientist. I relocated from Wyoming to Wisconsin to pursue a geoscience Ph.D in paleobiology, with an emphasis on mechanistic physiological modeling, mass extinction survivorship, and functional anatomy. In my spare time I am a husband, father, pet-father, and enjoy movies, photography and PC gaming.
+I loved the time I spent in the Mountain West, but managing and facilitating others' research rekindled my drive to become a professional research scientist. I relocated to Wisconsin, where I pursued a geoscience Ph.D in paleobiology, graduating with an emphasis on mechanistic physiological modeling, mass extinction survivorship, and functional anatomy. Now I get to teach those same subjects to undergraduates in the Department of Integrative Biology. In my spare time I am a husband, father, pet-father, and enjoy movies, photography and PC gaming.
 
 
 {{< icon name="download" pack="fas" >}} Download my {{< staticref "media/demo_resume.pdf" "newtab" >}}resumé{{< /staticref >}}.
