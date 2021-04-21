@@ -35,7 +35,7 @@ experience:
         * Course development
         * Grant application
         
-  - title: Scientific consultant & Illustrator
+   title: Scientific consultant & Illustrator
     company: SkeletalDrawing.com
     company_url: 'www.skeletaldrawing.com'
     date_start: '2010-01-01'
@@ -48,16 +48,31 @@ experience:
         * Contracted for major museums and media projects
         
   - title: Graduate Student, Teaching Assistant & Grad Lecturer
-    company: University of Wisconsin-Madison
-    company_url: 'www.wisc.edu'
-    date_start: '2014-09-01'
-    date_end: '2020-06-30'
-    description: |2-
+     company: University of Wisconsin-Madison
+     company_url: 'www.wisc.edu'
+     date_start: '2014-09-01'
+     date_end: '2020-06-30'
+     description: |2-
         Awards & Recognition include:
         
-        * Scientific Illustration
-        * Licensing & Consulting
-        * Contracted for major museums and media projects
+        * C.F. Schiesser Outstanding Student Research Paper Award (2020)
+        * George J. Verville Award in Geology and Geophysics (2018)
+        * L&S Teaching Fellow, College of Letters & Sciences (2017)
+        * Communication-B Teaching Assistant Fellow (2015)
+        
+  - title: Director of Science
+     company: Wyoming Dinosaur Center
+      company_url: 'https://wyomingdinosaurcenter.org/'
+     date_start: '2005-06-01'
+     date_end: '2010-09-01'
+      description: |2-
+        Responsibilities included:
+        
+        * Managed research program
+        * Collaborating with international institutions
+        * Oversight of of multiple dig sites
+        * Specimen curation 
+        * Designed and overhauled 15,000 sqft. of displays
 
 design:
   columns: '2'
