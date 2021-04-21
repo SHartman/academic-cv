@@ -25,7 +25,6 @@ experience:
   - title: Associate Professor
     company: University of Wisconsin-Madison
     company_url: 'www.wisc.edu'
-    company_logo: uw-crest-web.svg
     location: Wisconsin
     date_start: '2020-08-01'
     date_end: ''
@@ -43,6 +42,18 @@ experience:
     date_end:
     description: |2-
         Responsibilities include:
+        
+        * Scientific Illustration
+        * Licensing & Consulting
+        * Contracted for major museums and media projects
+        
+  - title: Graduate Student, Teaching Assistant & Grad Lecturer
+    company: University of Wisconsin-Madison
+    company_url: 'www.wisc.edu'
+    date_start: '2014-09-01'
+    date_end: '2020-06-30'
+    description: |2-
+        Awards & Recognition include:
         
         * Scientific Illustration
         * Licensing & Consulting
