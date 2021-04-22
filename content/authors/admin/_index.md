@@ -56,6 +56,15 @@ social:
 - icon: cv
   icon_pack: ai
   link: media/resume.pdf
+- icon: researchgate
+  icon_pack: fab
+  link: https://www.researchgate.net/profile/Benjamin-Linzmeier
+- icon: orcid
+  icon_pack: fab
+  link: https://orcid.org/0000-0002-3148-4971
+- icon: publons
+  icon_pack: ai
+  link: https://publons.com/researcher/AAD-5397-2020/
 
 # Enter email to display Gravatar (if Gravatar enabled in Config)
 email: "sahartman@wisc.edu"
@@ -69,4 +78,4 @@ I grew up loving dinosaurs and natural history, and a desire to be closer to Mes
 I loved the time I spent in the Mountain West, but managing and facilitating others' research rekindled my drive to become a professional research scientist. I relocated to Wisconsin, where I pursued a geoscience Ph.D in paleobiology, graduating with an emphasis on mechanistic physiological modeling, mass extinction survivorship, and functional anatomy. Now I get to teach those same subjects to undergraduates in the Department of Integrative Biology. In my spare time I am a husband, father, pet-father, and enjoy movies, photography and PC gaming.
 
 
-{{< icon name="download" pack="fas" >}} Download my {{< staticref "media/demo_resume.pdf" "newtab" >}}resumé{{< /staticref >}}.
+{{< icon name="download" pack="fas" >}} Download my {{< staticref "media/resume.pdf" "newtab" >}}resumé{{< /staticref >}}.
