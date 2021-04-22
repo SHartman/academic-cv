@@ -71,4 +71,4 @@ I grew up loving dinosaurs and natural history. To be closer to Mesozoic rocks I
 I love the Mountain West, but managing and facilitating others' research rekindled my drive to become a professional research scientist, so I relocated to Wisconsin to pursue a geoscience Ph.D in paleobiology, graduating with an emphasis on mechanistic physiological modeling, mass extinction survivorship, and functional anatomy. Now I get to teach those same subjects to undergraduates in the Department of Integrative Biology. In addition to academia, I value my status as a husband, father and pet-father, and in my free time I enjoy movies, photography, cheering for the Packers and PC gaming.
 
 
-{{< icon name="download" pack="fas" >}} Download my {{< staticref "media/resume.pdf" "newtab" >}}resumé{{< /staticref >}}.
+{{< icon name="download" pack="fas" >}} Download my {{< staticref "media/resume.pdf" "newtab" >}}resume{{< /staticref >}}.
