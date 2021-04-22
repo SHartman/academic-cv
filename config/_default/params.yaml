@@ -30,8 +30,8 @@ address:
   country: United States
   country_code: US
 coordinates:
-  latitude: '43.07227'
-  longitude: '-89.40436'
+  latitude: '43.071763739118765'
+  longitude: '-89.40428536922376'
 directions: Enter Noland Hall take the stairs or elevator to Office 507 on Floor 5
 contact_links:
   - icon: twitter
