@@ -58,13 +58,6 @@ social:
   link: media/resume.pdf
 - icon: researchgate
   icon_pack: fab
-  link: https://www.researchgate.net/profile/Benjamin-Linzmeier
-- icon: orcid
-  icon_pack: fab
-  link: https://orcid.org/0000-0002-3148-4971
-- icon: publons
-  icon_pack: ai
-  link: https://publons.com/researcher/AAD-5397-2020/
 
 # Enter email to display Gravatar (if Gravatar enabled in Config)
 email: "sahartman@wisc.edu"
