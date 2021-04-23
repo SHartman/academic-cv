@@ -36,7 +36,7 @@ item:
   - title: Paleobiology
     #content: 'I am left aligned 😄'
     align: left
-    #overlay_color: '#555'
+    overlay_color: '#555'
     overlay_img: miscfigs.png
     overlay_filter: 0.35
 ---
