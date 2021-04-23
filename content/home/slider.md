@@ -33,10 +33,10 @@ item:
   - title:
     align: left
     overlay_img: ribcage.png
-  - title: Paleobiology
+  - title:
     #content: 'Paleobiology'
     align: left
-    overlay_color: '#555'
+    #overlay_color: '#555'
     overlay_img: miscfigs.png
-    overlay_filter: 0.35
+    #overlay_filter: 0.35
 ---
