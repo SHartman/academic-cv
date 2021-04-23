@@ -14,8 +14,8 @@ interval: 5000
 height: 400px
 
 item:
-  - title: Physiological Modeling
-    #content: 'A SIMS pit'
+  - title: 
+    #content: 'Physiological modeling'
     # Choose `center`, `left`, or `right` alignment.
     align: left
     # Overlay a color or image (optional).
@@ -30,11 +30,11 @@ item:
     #cta_url: 'https://example.org'
     #cta_icon_pack: fas
     #cta_icon: graduation-cap
-  - title: Functional Morphology
+  - title:
     align: left
     overlay_img: ribcage.png
   - title: Paleobiology
-    #content: 'I am left aligned 😄'
+    #content: 'Paleobiology'
     align: left
     overlay_color: '#555'
     overlay_img: miscfigs.png
