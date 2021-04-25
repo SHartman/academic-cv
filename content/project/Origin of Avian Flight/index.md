@@ -2,7 +2,7 @@
 title: Origin of Avian Flight
 summary: An example of using the in-built project page.
 tags:
-- Phylogenetics
+- Phylogeny
 - Evolution
 - Anatomy
 

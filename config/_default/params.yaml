@@ -32,7 +32,7 @@ address:
 coordinates:
   latitude: '43.071763739118765'
   longitude: '-89.40428536922376'
-directions: Enter Noland Hall take the stairs or elevator to Office 507 on Floor 5
+directions: Enter Noland Hall, take the stairs or elevator to Office 507 on Floor 5
 contact_links:
   - icon: twitter
     icon_pack: fab
@@ -69,7 +69,7 @@ math: false
 diagram: false
 privacy_pack: false
 edit_page:
-  repo_url: ''
+  repo_url: 'https://github.com/SHartman/academic-cv'
   content_dir: ''
   repo_branch: main
   editable:

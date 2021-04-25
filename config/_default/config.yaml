@@ -4,8 +4,8 @@
 # This file is formatted using YAML syntax - learn more at https://learnxinyminutes.com/docs/yaml/
 
 title: Paleo, physiology & anatomy # Website name
-baseurl: '' # Website URL
-copyright: '' # Footer text, e.g. '© {year} Me'
+baseurl: 'https://www.scotthartman.info/' # Website URL
+copyright: '© {2021} Scott Hartman' # Footer text, e.g. '© {year} Me'
 
 ############################
 ## LANGUAGE

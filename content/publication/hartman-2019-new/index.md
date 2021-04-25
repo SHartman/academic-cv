@@ -3,7 +3,6 @@
 
 title: 'A new paravian dinosaur from the Late Jurassic of North America supports a late acquisition of avian flight'
 subtitle: ''
-Jurassic-Cretaceoussummary: ''
 authors:
 - Scott Hartman
 - Mickey Mortimer
@@ -13,7 +12,7 @@ authors:
 - David M. Lovelace
 
 tags:
-- Phylogenetics
+- Phylogeny
 - Anatomy
 - Origin of Birds
 - Evolution
