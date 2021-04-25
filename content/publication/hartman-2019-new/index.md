@@ -13,7 +13,7 @@ authors:
 - David M. Lovelace
 
 tags:
-- Phylogeny
+- Phylogenetics
 - Anatomy
 - Origin of Birds
 - Evolution
