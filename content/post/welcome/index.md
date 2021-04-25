@@ -3,7 +3,7 @@ title: Welcome to my new academic CV website
 subtitle: "Welcome 👋 Much of my professional scientific and teaching career is not tied to the skeletal drawings I've produced over the last 25 years, so it seemed appropriate to create a separate site for my courses, academic CV, and research to live in."
 
 # Summary for listings and search engines
-summary: Much of my professional scientific and teaching career is not tied to the skeletal drawings I've produced over the last 25 years, so it seemed appropriate to create a separate site for my courses, academic CV, and research to live in.
+summary: "Much of my professional scientific and teaching career is not tied to the skeletal drawings I've produced over the last 25 years, so it seemed appropriate to create a separate site for my courses, academic CV, and research to live in.""
 
 # Link this post with a project
 projects: []
