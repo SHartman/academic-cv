@@ -13,12 +13,8 @@ image:
   preview_only: false
 lastmod: "2021-04-24"
 projects: []
-subtitle: "Welcome \U0001F44B We know that first impressions are important, so we've
-  populated your new site with some initial content to help you get familiar with
-  everything in no time."
-summary: "Welcome \U0001F44B We know that first impressions are important, so we've
-  populated your new site with some initial content to help you get familiar with
-  everything in no time."
+subtitle: "Welcome 👋 Much of my professional scientific and teaching career is not tied to the skeletal drawings I've produced over the last 25 years, so it seemed appropriate to create a separate site for my courses, academic CV, and research to live in"
+summary: "Much of my professional scientific and teaching career is not tied to the skeletal drawings I've produced over the last 25 years, so it seemed appropriate to create a separate site for my courses, academic CV, and research to live in."
 tags:
 - Academic
 - 开源
