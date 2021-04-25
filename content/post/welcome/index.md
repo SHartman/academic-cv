@@ -18,7 +18,7 @@ summary: "Much of my professional scientific and teaching career is not tied to 
 tags:
 - Academic
 - 开源
-title: Welcome to Wowchemy, the website builder for Hugo
+title: Welcome to my new academic CV website
 ---
 
 ## Overview
