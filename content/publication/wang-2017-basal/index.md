@@ -18,7 +18,7 @@ tags: Anatomy
 categories: []
 date: '2017-03-01'
 lastmod: 
-featured: false
+featured: true
 draft: false
 
 # Featured image
