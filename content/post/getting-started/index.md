@@ -46,7 +46,7 @@ So this is my second home on the internet. Or the first, depending on what you a
 
 Oh, and if you are hoping for more skeletal reconstructions as well, don't worry, I have a lot of material coming down the pike.
 
-{{< figure src="https://drive.google.com/file/d/1wJ8Y8F3kAhcY8VnmBB_SnTausDIPyd90/view?usp=sharing" title="The template is mobile first with a responsive design to ensure that your site looks stunning on every device." >}}
+{{< figure src="https://github.com/SHartman/academic-cv/blob/master/assets/media/dreadnoughtus_mass_estimates.jpg" title="The template is mobile first with a responsive design to ensure that your site looks stunning on every device." >}}
 
 ## Get Started
 
