@@ -1,18 +1,18 @@
 ---
-title: Welcome to Wowchemy, the website builder for Hugo
-subtitle: Welcome 👋 We know that first impressions are important, so we've populated your new site with some initial content to help you get familiar with everything in no time.
+title: "Hello World"" to my new academic CV website
+subtitle: Welcome 👋 Much of my professional scientific and teaching career is not tied to the skeletal drawings I've produced over the last 25 years, so it seemed appropriate to create a separate site for my courses, academic CV, and research to live in.
 
 # Summary for listings and search engines
-summary: Welcome 👋 We know that first impressions are important, so we've populated your new site with some initial content to help you get familiar with everything in no time.
+summary: Much of my professional scientific and teaching career is not tied to the skeletal drawings I've produced over the last 25 years, so it seemed appropriate to create a separate site for my courses, academic CV, and research to live in.
 
 # Link this post with a project
 projects: []
 
 # Date published
-date: "2020-12-13T00:00:00Z"
+date: "2021-04-25"
 
 # Date updated
-lastmod: "2020-12-13T00:00:00Z"
+lastmod: "2021-04-25"
 
 # Is this an unpublished draft?
 draft: false
@@ -23,8 +23,8 @@ featured: false
 # Featured image
 # Place an image named `featured.jpg/png` in this page's folder and customize its options here.
 image:
-  caption: 'Image credit: [**Unsplash**](https://unsplash.com/photos/CpkOjOcXdUY)'
-  focal_point: ""
+  caption: 'Me, although my pandemic hair cut doesn't match this photo right now.'
+  focal_point: "smart"
   placement: 2
   preview_only: false
 
@@ -36,18 +36,17 @@ tags:
 - Academic
 
 
-categories:
-- Demo
-
 ---
 
-## Overview
+## Welcome to my other home on the internet!
 
-1. The Wowchemy website builder for Hugo, along with its starter templates, is designed for professional creators, educators, and teams/organizations - although it can be used to create any kind of site
-2. The template can be modified and customised to suit your needs. It's a good platform for anyone looking to take control of their data and online identity whilst having the convenience to start off with a **no-code solution (write in Markdown and customize with YAML parameters)** and having **flexibility to later add even deeper personalization with HTML and CSS**
-3. You can work with all your favourite tools and apps with hundreds of plugins and integrations to speed up your workflows, interact with your readers, and much more
+Before returning to school to get my PhD, I already had a web-presence for the skeletal reconstructions of living and extinct (mostly extinct) I've produced over the last 25 years. While I haven't given up the anatomy diagram business, so to speak, it's become clear to me that most of my students, collaborators and colleagues don't necessarily want to wade through unrelated content to find out more about courses, publications, and current contact information. And in all likelihood many visitors to www.skeletaldrawing.com are not terribly interested in which coures I teach, or my current (non-skeletal) research projects.
 
-{{< figure src="https://raw.githubusercontent.com/wowchemy/wowchemy-hugo-modules/master/academic.png" title="The template is mobile first with a responsive design to ensure that your site looks stunning on every device." >}}
+So this is my second home on the internet. Or the first, depending on what you are looking for. I plan to use this platform to talk about teaching philosophy, issues pertinent to academic life, and ongoing research projects that are not explicitly about the skeletal anatomy of long-dead stuff. Obviously all opinions are my own!
+
+Oh, and if you are hoping for more skeletal reconstructions as well, don't worry, I have a lot of material coming down the pike.
+
+{{< figure src="https://drive.google.com/file/d/1wJ8Y8F3kAhcY8VnmBB_SnTausDIPyd90/view?usp=sharing" title="The template is mobile first with a responsive design to ensure that your site looks stunning on every device." >}}
 
 ## Get Started
 
