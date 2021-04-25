@@ -6,7 +6,7 @@ subtitle: ''
 summary: ''
 authors:
 - Christophe Hendrickx
-- Scott Hartman Octávio Mateus
+- Scott Hartman
 - Octávio Mateus
 
 tags: Phylogeny
