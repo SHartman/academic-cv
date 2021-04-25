@@ -13,7 +13,7 @@ image:
   preview_only: false
 lastmod: "2020-12-13T00:00:00Z"
 projects: []
-subtitle: "Welcome 👋 Much of my professional scientific and teaching career is not tied to the skeletal drawings I've produced over the last 25 years, so it seemed appropriate to create a separate site for my courses, academic CV, and research to live in."
+subtitle: "Welcome 👋 to me second home on the internet!"
 summary: "Much of my professional scientific and teaching career is not tied to the skeletal drawings I've produced over the last 25 years, so it seemed appropriate to create a separate site for my courses, academic CV, and research to live in."
 tags:
 - Academic
@@ -22,9 +22,11 @@ title: Welcome to my new academic CV website
 
 ## Overview
 
-1. The Wowchemy website builder for Hugo, along with its starter templates, is designed for professional creators, educators, and teams/organizations - although it can be used to create any kind of site
-2. The template can be modified and customised to suit your needs. It's a good platform for anyone looking to take control of their data and online identity whilst having the convenience to start off with a **no-code solution (write in Markdown and customize with YAML parameters)** and having **flexibility to later add even deeper personalization with HTML and CSS**
-3. You can work with all your favourite tools and apps with hundreds of plugins and integrations to speed up your workflows, interact with your readers, and much more
+Before returning to school to get my PhD, I already had a web-presence for the skeletal reconstructions of living and extinct (mostly extinct) I've produced over the last 25 years. While I haven't given up the anatomy diagram business, so to speak, it's become clear to me that most of my students, collaborators and colleagues don't necessarily want to wade through unrelated content to find out more about courses, publications, and current contact information. And in all likelihood many visitors to www.skeletaldrawing.com are not terribly interested in which coures I teach, or my current (non-skeletal) research projects.
+
+So this is my second home on the internet. Or the first, depending on what you are looking for. I plan to use this platform to talk about pedagogy, ongoing research projects (that are not explicitly about the skeletal anatomy of long-dead stuff) and other parts of academic life. Obviously, all opinions are my own!
+
+Oh, and if you are hoping for more skeletal reconstructions as well, don't worry, I have plenty of material coming down the pike.
 
 {{< figure src="https://raw.githubusercontent.com/wowchemy/wowchemy-hugo-modules/master/academic.png" title="The template is mobile first with a responsive design to ensure that your site looks stunning on every device." >}}
 
