@@ -1,5 +1,5 @@
 ---
-title: *Hello World* to my new academic CV website
+title: Welcome to my new academic CV website
 subtitle: Welcome 👋 Much of my professional scientific and teaching career is not tied to the skeletal drawings I've produced over the last 25 years, so it seemed appropriate to create a separate site for my courses, academic CV, and research to live in.
 
 # Summary for listings and search engines
@@ -42,9 +42,9 @@ tags:
 
 Before returning to school to get my PhD, I already had a web-presence for the skeletal reconstructions of living and extinct (mostly extinct) I've produced over the last 25 years. While I haven't given up the anatomy diagram business, so to speak, it's become clear to me that most of my students, collaborators and colleagues don't necessarily want to wade through unrelated content to find out more about courses, publications, and current contact information. And in all likelihood many visitors to www.skeletaldrawing.com are not terribly interested in which coures I teach, or my current (non-skeletal) research projects.
 
-So this is my second home on the internet. Or the first, depending on what you are looking for. I plan to use this platform to talk about teaching philosophy, issues pertinent to academic life, and ongoing research projects that are not explicitly about the skeletal anatomy of long-dead stuff. Obviously all opinions are my own!
+So this is my second home on the internet. Or the first, depending on what you are looking for. I plan to use this platform to talk about pedagogy, ongoing research projects (that are not explicitly about the skeletal anatomy of long-dead stuff) and other parts of academic life. Obviously, all opinions are my own!
 
-Oh, and if you are hoping for more skeletal reconstructions as well, don't worry, I have a lot of material coming down the pike.
+Oh, and if you are hoping for more skeletal reconstructions as well, don't worry, I have plenty of material coming down the pike.
 
 {{< figure src="https://github.com/SHartman/academic-cv/blob/master/assets/media/dreadnoughtus_mass_estimates.jpg" title="The template is mobile first with a responsive design to ensure that your site looks stunning on every device." >}}
 
