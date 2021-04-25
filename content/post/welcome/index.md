@@ -1,6 +1,6 @@
 ---
 title: Welcome to my new academic CV website
-subtitle: Welcome 👋 Much of my professional scientific and teaching career is not tied to the skeletal drawings I've produced over the last 25 years, so it seemed appropriate to create a separate site for my courses, academic CV, and research to live in.
+subtitle: "Welcome 👋 Much of my professional scientific and teaching career is not tied to the skeletal drawings I've produced over the last 25 years, so it seemed appropriate to create a separate site for my courses, academic CV, and research to live in."
 
 # Summary for listings and search engines
 summary: Much of my professional scientific and teaching career is not tied to the skeletal drawings I've produced over the last 25 years, so it seemed appropriate to create a separate site for my courses, academic CV, and research to live in.
@@ -24,7 +24,7 @@ featured: false
 # Place an image named `featured.jpg/png` in this page's folder and customize its options here.
 image:
   caption: 'Me, although my pandemic hair cut doesn't match this photo right now.'
-  focal_point: "smart"
+  focal_point: ""
   placement: 2
   preview_only: false
 
