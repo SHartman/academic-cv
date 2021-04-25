@@ -50,14 +50,12 @@ social:
 - icon: github
   icon_pack: fab
   link: https://github.com/SHartman
-- icon: linkedin
-  icon_pack: fab
-  link: https://www.linkedin.com/in/scott-hartman-15146320/
 - icon: cv
   icon_pack: ai
   link: media/resume.pdf
 - icon: researchgate
   icon_pack: fab
+  link: https://www.researchgate.net/profile/Scott-Hartman
 
 # Enter email to display Gravatar (if Gravatar enabled in Config)
 email: "sahartman@wisc.edu"
@@ -66,9 +64,9 @@ email: "sahartman@wisc.edu"
 highlight_name: false
 ---
 
-I grew up loving dinosaurs and natural history. To be closer to Mesozoic rocks I left California to attend the University of Wyoming. I am forever grateful for the field & museum experience in paleontology I gained in Laramie. Subsequently I moved to Thermopolis, WY to manage research and display development as Science Director at The Wyoming Dinosaur Center. At the same time, I pursued an independent scientific illustration career, resulting in a large catalog of skeletal anatomy diagrams - interested parties can explore them at: www.skeletaldrawing.com.
+Like many kids, I grew up loving dinosaurs and natural history. For college (and to be closer to Mesozoic rocks!) I left California to attend the University of Wyoming, where I am forever grateful for the field & museum experience opportunities I was given. I later moved to Thermopolis, WY to manage research and display development as Science Director at The Wyoming Dinosaur Center. At the same time, I pursued an independent scientific illustration career, resulting in a large catalog of skeletal anatomy diagrams - interested parties can explore them at: www.skeletaldrawing.com.
 
-I love the Mountain West, but managing and facilitating others' research rekindled my drive to become a professional research scientist, so I relocated to Wisconsin to pursue a geoscience Ph.D in paleobiology, graduating with an emphasis on mechanistic physiological modeling, mass extinction survivorship, and functional anatomy. Now I get to teach those same subjects to undergraduates in the Department of Integrative Biology. In addition to academia, I value my status as a husband, father and pet-father, and in my free time I enjoy movies, photography, cheering for the Packers and PC gaming.
+I loved my time in the Mountain West, but managing and facilitating others' research rekindled my drive to become a professional research scientist, so I relocated to Wisconsin to pursue a geoscience Ph.D in paleobiology. My dissertation research emphasized mechanistic physiological modeling, mass extinction survivorship, and functional anatomy. These days I am still in Wisconsin, where I get to teach those same subjects to undergraduates in the Department of Integrative Biology. In addition to my academic pursuits, I have a wonderful wife and daughter, some fur-babies, and in what passes for free time I enjoy movies, photography, cheering for the Green Bay Packers, and PC gaming.
 
 
 {{< icon name="download" pack="fas" >}} Download my {{< staticref "media/resume.pdf" "newtab" >}}CV{{< /staticref >}}.
