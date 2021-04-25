@@ -28,7 +28,7 @@ So this is my second home on the internet. Or the first, depending on what you a
 
 Oh, and if you are hoping for more skeletal reconstructions as well, don't worry, I have plenty of material coming down the pike.
 
-{{< figure src="https://github.com/SHartman/academic-cv/blob/master/assets/media/dreadnoughtus_mass_estimates.jpg" title="The template is mobile first with a responsive design to ensure that your site looks stunning on every device." >}}
+{{< figure src="/image/dreanoughtus_mass_estimates.jpg" title="*Dreadnoughtus* mass estimates for articulated & disarticulated rib cages, from my dissertation." >}}
 
 ## Get Started
 
