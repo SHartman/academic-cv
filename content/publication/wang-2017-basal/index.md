@@ -1,8 +1,8 @@
 ---
 # Documentation: https://wowchemy.com/docs/managing-content/
 
-title: 'Basal paravian functional anatomy illuminated
-by high-detail body outline'
+title: Basal paravian functional anatomy illuminated
+by high-detail body outline
 subtitle: ''
 summary: ''
 authors:
@@ -26,7 +26,7 @@ draft: false
 # To use, add an image named `featured.jpg/png` to your page's folder.
 # Focal points: Smart, Center, TopLeft, Top, TopRight, Left, Right, BottomLeft, Bottom, BottomRight.
 image:
-  caption: 'Figure 1: Reconstructed body outline of basal paravian Anchiornis using LSF images'
+  caption: 'Figure 1 - Reconstructed body outline of basal paravian *Anchiornis* using LSF images'
   focal_point: 'smart'
   preview_only: false
 
@@ -35,7 +35,7 @@ image:
 #   Simply enter your project's folder or file name without extension.
 #   E.g. `projects = ["internal-project"]` references `content/project/deep-learning/index.md`.
 #   Otherwise, set `projects = []`.
-projects: 'Origin of Avian Flight'
+projects: []
 publishDate: '2017-03-01'
 publication_types:
 - '2'
@@ -53,5 +53,5 @@ decoupling between the legs and tail in at least some basal paravians. The numbe
 seemingly modern propatagial traits hint that feathering was a significant factor in how basal
 paravians utilized arm, leg and tail function for aerodynamic benefit.'
 publication: '*Nature Communications*'
-DOI: '10.1038/ncomms14576'
+DOI: 10.1038/ncomms14576
 ---
