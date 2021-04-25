@@ -1,8 +1,7 @@
 ---
 # Documentation: https://wowchemy.com/docs/managing-content/
 
-title: Basal paravian functional anatomy illuminated
-by high-detail body outline
+title: Basal paravian functional anatomy illuminated by high-detail body outline
 subtitle: ''
 summary: ''
 authors:
