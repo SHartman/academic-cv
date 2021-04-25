@@ -20,7 +20,7 @@ tags:
 title: Welcome to my new academic CV website
 ---
 
-## Overview
+## So what is all this about?
 
 Before returning to school to get my PhD, I already had a web-presence for the skeletal reconstructions of living and extinct (mostly extinct) I've produced over the last 25 years. While I haven't given up the anatomy diagram business, so to speak, it's become clear to me that most of my students, collaborators and colleagues don't necessarily want to wade through unrelated content to find out more about courses, publications, and current contact information. And in all likelihood many visitors to www.skeletaldrawing.com are not terribly interested in which coures I teach, or my current (non-skeletal) research projects.
 
@@ -28,7 +28,7 @@ So this is my second home on the internet. Or the first, depending on what you a
 
 Oh, and if you are hoping for more skeletal reconstructions as well, don't worry, I have plenty of material coming down the pike.
 
-{{< figure src="https://raw.githubusercontent.com/wowchemy/wowchemy-hugo-modules/master/academic.png" title="The template is mobile first with a responsive design to ensure that your site looks stunning on every device." >}}
+{{< figure src="https://github.com/SHartman/academic-cv/blob/master/assets/media/dreadnoughtus_mass_estimates.jpg" title="The template is mobile first with a responsive design to ensure that your site looks stunning on every device." >}}
 
 ## Get Started
 
