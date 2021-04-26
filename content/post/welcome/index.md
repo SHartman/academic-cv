@@ -7,7 +7,7 @@ date: "2021-04-24"
 draft: false
 featured: false
 image:
-  caption: 'Me, although my pandemic haircut doesn't quite match this image currently!'
+  caption: 'Simple'
   focal_point: ""
   placement: 2
   preview_only: false
@@ -30,3 +30,4 @@ Oh, and if you are hoping for more skeletal reconstructions as well, don't worry
 
 {{< figure src="https://github.com/SHartman/academic-cv/blob/master/content/post/welcome/image/dreadnoughtus_mass_estimates.jpg?raw=true" title="*Dreadnoughtus* mass estimates for articulated & disarticulated rib cages, Hartman (2020)." >}}
 
+If you have hung around this far, but really just want to see more blog content on [**SkeletalDrawing.com**](https://www.skeletaldrawing.com), there is more of that coming as well.
