@@ -7,7 +7,7 @@ date: "2021-04-24"
 draft: false
 featured: false
 image:
-  caption: 'Me in my pre-pandemic haircut'
+  caption: 'Me with my pre-pandemic haircut.'
   focal_point: ""
   placement: 2
   preview_only: false
