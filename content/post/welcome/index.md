@@ -7,13 +7,13 @@ date: "2021-04-24"
 draft: false
 featured: false
 image:
-  caption: 'Image credit: [**Unsplash**](https://unsplash.com/photos/CpkOjOcXdUY)'
+  caption: 'Me, although my pandemic haircut doesn't quite match this image currently!'
   focal_point: ""
   placement: 2
   preview_only: false
-lastmod: "2020-12-13T00:00:00Z"
+lastmod: "2021-04-24"
 projects: []
-subtitle: "Welcome 👋 to me second home on the internet!"
+subtitle: "Welcome 👋 to my second home on the internet!"
 summary: "Much of my professional scientific and teaching career is not tied to the skeletal drawings I've produced over the last 25 years, so it seemed appropriate to create a separate site for my courses, academic CV, and research to live in."
 tags:
 - Academic
@@ -30,19 +30,4 @@ Oh, and if you are hoping for more skeletal reconstructions as well, don't worry
 
 {{< figure src="https://github.com/SHartman/academic-cv/blob/master/content/post/welcome/image/dreadnoughtus_mass_estimates.jpg?raw=true" title="*Dreadnoughtus* mass estimates for articulated & disarticulated rib cages, Hartman (2020)." >}}
 
-## Get Started
-
-- 👉 [**Create a new site**](https://wowchemy.com/templates/)
-- 📚 [**Personalize your site**](https://wowchemy.com/docs/)
-- 💬 [Chat with the **Wowchemy community**](https://discord.gg/z8wNYzb) or [**Hugo community**](https://discourse.gohugo.io)
-- 🐦 Twitter: [@wowchemy](https://twitter.com/wowchemy) [@GeorgeCushen](https://twitter.com/GeorgeCushen) [#MadeWithWowchemy](https://twitter.com/search?q=(%23MadeWithWowchemy%20OR%20%23MadeWithAcademic)&src=typed_query)
-- 💡 [Request a **feature** or report a **bug** for _Wowchemy_](https://github.com/wowchemy/wowchemy-hugo-modules/issues)
-- ⬆️ **Updating Wowchemy?** View the [Update Guide](https://wowchemy.com/docs/guide/update/) and [Release Notes](https://wowchemy.com/updates/)
-
-### [❤️ Click here to become a sponsor and help support Wowchemy's future ❤️](https://wowchemy.com/plans/)
-
-As a token of appreciation for sponsoring, you can **unlock [these](https://wowchemy.com/plans/) awesome rewards and extra features 🦄✨**
-
-## License
-
-Copyright 2021-present Scott Hartman.
+And if you are hoping to see blog content on [**SkeletalDrawing.com**](https://www.skeletaldrawing.com), there will be more of that coming as well.
