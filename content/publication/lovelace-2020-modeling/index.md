@@ -31,7 +31,7 @@ image:
 #   Simply enter your project's folder or file name without extension.
 #   E.g. `projects = ["internal-project"]` references `content/project/mechanistic_physiological_modeling/index.md`.
 #   Otherwise, set `projects = []`.
-projects: mechanistic-physiological-modeling
+projects: []
 publishDate: '2020-05-29'
 publication_types:
 - '2'
