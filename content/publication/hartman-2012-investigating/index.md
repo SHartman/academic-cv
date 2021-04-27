@@ -26,7 +26,7 @@ image:
 #   Simply enter your project's folder or file name without extension.
 #   E.g. `projects = ["internal-project"]` references `content/project/deep-learning/index.md`.
 #   Otherwise, set `projects = []`.
-projects: []
+projects: Functional-Anatomy
 publishDate: '2012-10-01'
 publication_types:
 - '1'
@@ -40,4 +40,5 @@ Published interpretations of forelimb posture in sauropods vary mostly in the or
 
 These findings demonstrate that restoring the axial column alone is insufficient to accurately estimate head height in sauropods. Competing interpretations of pectoral girdle position and hind limb kinematics can influence the angle of the cervical series significantly, suggesting that a more holistic approach must be taken with regard to sauropod neck posture.'
 publication: '*JVP*'
+url_pdf: https://drive.google.com/file/d/0BxtacAPOhqKaTmcyZl9XYnRyeXc/view
 ---
