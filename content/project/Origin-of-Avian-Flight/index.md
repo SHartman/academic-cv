@@ -13,11 +13,11 @@ image:
   caption: 'Time-callibrated phylogeny showing multiple origins of theropod aerial behavior, and a relatively late origin of avian flight'
   focal_point: Smart
 
-links:
-- icon: twitter
-  icon_pack: fab
-  name: Follow
-  url: https://twitter.com/skeletaldrawing
+#links:
+#- icon: twitter
+#  icon_pack: fab
+#  name: Follow
+#  url: https://twitter.com/skeletaldrawing
 #url_code: ""
 #url_pdf: ""
 #url_slides: ""
