@@ -30,7 +30,7 @@ projects:
 - Functional-Anatomy
 publishDate: '2012-10-01'
 publication_types:
-- '1'
+- '2'
 abstract: 'Previous attempts to reconstruct the posture and potential range of motion in the cervical series of sauropod dinosaurs have focused on restoring the osteological neutral position (ONP) of the axial column, as well as attempts to link ONP with the degree of habitual vertebral flexion observed in extant vertebrates (Stevens & Parrish, 2005; Taylor et al, 2009). While placement of the pectoral girdle has been examined in depth (e.g. Bonnan et al., 2005), the roll of differing interpretations of appendicular posture has been largely ignored.
 
 To evaluate the impact of competing functional interpretations of the pectoral girdle and appendicular skeleton, a quantitative analysis was conducted on the three most commonly used interpretations of pectoral girdle placement in the literature, and several models of limb kinematics. Testing was carried out on a 3D digital data set of Camarasaurus, as well as dimensionally-accurate skeletal diagrams of Camarasaurus and several other neosauropods to increase taxonomic sampling. 
