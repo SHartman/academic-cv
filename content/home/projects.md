@@ -10,7 +10,7 @@ headless: false
 weight: 65
 
 title: Projects
-subtitle: 'Origin of Avian Flight'
+subtitle: 'Check out what I've been working on'
 
 content:
   # Page type to display. E.g. project.
