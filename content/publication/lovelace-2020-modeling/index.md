@@ -24,7 +24,7 @@ draft: false
 # To use, add an image named `featured.jpg/png` to your page's folder.
 # Focal points: Smart, Center, TopLeft, Top, TopRight, Left, Right, BottomLeft, Bottom, BottomRight.
 image:
-  caption: 'figure 11. Comparison of daily temperature curves for Varanus and Coelophysis (uninsulated).'
+  caption: 'Figure 11. Comparison of daily temperature curves for Varanus and Coelophysis (uninsulated).'
   focal_point: 'smart'
   preview_only: false
 

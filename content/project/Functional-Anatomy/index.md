@@ -7,7 +7,7 @@ tags: Anatomy
 external_link: ""
 
 image:
-  caption: 'Reconstructed location and volume of the caudfemoralis musculatur in *Tyrannosaurus*.'
+  caption: 'Reconstructed location and volume of the caudfemoralis musculatur in Tyrannosaurus.'
   focal_point: Smart
 
 #links:
