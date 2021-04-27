@@ -7,7 +7,7 @@ tags:
 - Extinction
 
 # Optional external URL for project (replaces project detail page).
- external_link: ""
+external_link: ""
 
 image:
   caption: 'Schematic diagram of a NicheMapper simulation'
