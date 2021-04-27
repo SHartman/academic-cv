@@ -24,8 +24,13 @@ all_day: false
 # Schedule page publish date (NOT talk date).
 #publishDate: "2017-01-01T00:00:00Z"
 
-authors: []
-tags: []
+authors:
+  - Scott Hartman
+  - Adam Fitch
+tags:
+  - Anatomy
+  - Evolution
+  - Phylogeny
 
 # Is this a featured talk? (true/false)
 featured: false
@@ -57,6 +62,6 @@ url_video: ""
 #   E.g. `projects = ["internal-project"]` references `content/project/deep-learning/index.md`.
 #   Otherwise, set `projects = []`.
 projects:
-- Origin of Avian Flight
+- Origin-of-Avian-Flight
 ---
 

@@ -13,7 +13,6 @@ authors:
 - Scott Hartman
 - Xing Xu
 
-tags: Origin of Avian Flight
 tags: Anatomy
 categories: []
 date: '2017-03-01'
@@ -34,7 +33,8 @@ image:
 #   Simply enter your project's folder or file name without extension.
 #   E.g. `projects = ["internal-project"]` references `content/project/deep-learning/index.md`.
 #   Otherwise, set `projects = []`.
-projects: []
+projects:
+  - Origin-of-Avian-Flight
 publishDate: '2017-03-01'
 publication_types:
 - '2'
