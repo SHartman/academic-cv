@@ -32,4 +32,4 @@ links:
 #slides: example
 ---
 
-Since 2012 I have been working with Warren Porter & David Lovelace to 
+In 2012 I joined up with Warren Porter, David Lovelace and Paul Mathewson to 

@@ -29,7 +29,7 @@ image:
 # Projects (optional).
 #   Associate this post with one or more of your projects.
 #   Simply enter your project's folder or file name without extension.
-#   E.g. `projects = ["internal-project"]` references `content/project/mechanistic-physiological-modeling/index.md`.
+#   E.g. `projects = ["internal-project"]` references `content/project/mechanistic_physiological_modeling/index.md`.
 #   Otherwise, set `projects = []`.
 projects: `content/project/mechanistic-physiological-modeling/index.md`
 publishDate: '2020-05-29'
