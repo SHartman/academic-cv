@@ -3,8 +3,8 @@
 
 title: 'Investigating the impact of competing interpretations of pectoral girdle placement and appendicular function on sauropod head height'
 subtitle: ''
-authors: Scott Hartman
-
+authors: 
+- Scott Hartman
 tags:
 - Anatomy
 categories: []
