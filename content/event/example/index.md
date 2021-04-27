@@ -39,11 +39,11 @@ image:
   caption: 'Image credit: Scott Hartman'
   focal_point: Right
 
-links:
-- icon: twitter
-  icon_pack: fab
-  name: Follow
-  url: https://twitter.com/skeletaldrawing
+#links:
+#- icon: twitter
+#  icon_pack: fab
+#  name: Follow
+#  url: https://twitter.com/skeletaldrawing
 url_code: ""
 url_pdf: ""
 url_slides: ""
