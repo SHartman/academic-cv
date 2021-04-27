@@ -1,7 +1,7 @@
 ---
-title: Slides
-summary: An introduction to using Wowchemy's Slides feature.
-authors: []
+title: Slides...to replace?
+summary: Where does this show up?
+authors: admin
 tags: []
 categories: []
 date: "2019-02-05T00:00:00Z"
