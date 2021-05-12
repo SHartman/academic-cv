@@ -1,0 +1,20 @@
+# Theme metadata
+name = "UW-Theme"
+
+# Is theme light or dark?
+light = true
+
+# Primary
+primary = "#c5050c"
+
+# Menu
+menu_primary = "#c5050c"
+menu_text = "#34495e"
+menu_text_active = "#2962ff"
+menu_title = "#2b2b2b"
+
+# Backgrounds
+home_section_odd = "#f7f7f7"
+home_section_even = "#dadfe1"
+
+#font = "rose"
