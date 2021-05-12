@@ -14,7 +14,7 @@ menu_text_active = "#dadfe1"
 menu_title = "#f7f7f7"
 
 # Backgrounds
-home_section_odd = "#f7f7f7"
-home_section_even = "#f5f5f5"
+home_section_odd = "rgb(255, 255, 255)"
+home_section_even = "#f7f7f7"
 
 font = "uwfont"
