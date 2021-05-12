@@ -23,7 +23,7 @@ draft: false
 # To use, add an image named `featured.jpg/png` to your page's folder.
 # Focal points: Smart, Center, TopLeft, Top, TopRight, Left, Right, BottomLeft, Bottom, BottomRight.
 image:
-  caption: 'Figure 4. *Archaeopteryx siemensii* Dames, 1897, Thermopolis specimen (WDC-CSG-100). Skull. A, Ultraviolet-induced fluorescence photograph. B, Interpretative drawing. C, Stereo pair. dt, dentary teeth; ec, ectopterygoid; fr, frontal; hy, hyoid; j, jugal; la, lacrimal; md, mandible; mf, maxillary fenestra; mx, maxilla; na, nasal; pa, parietal; pf, promaxillary fenestra; pg, pterygoid; pm, premaxilla; pt, palatine; q, quadrate; sc, ossicles of sclerotic ring; v, vomer.'
+  caption: 'Figure 4. *Archaeopteryx siemensii* Dames, 1897, Thermopolis specimen (WDC-CSG-100). Skull. A, Ultraviolet-induced fluorescence photograph. B, Interpretative drawing. C, Stereo pair.'
   focal_point: 'smart'
   preview_only: false
 
