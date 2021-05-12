@@ -4,10 +4,8 @@ authors:
 # categories:
 # - Demo
 date: "2021-04-27"
-draft: false
-featured: false
 image:
-  caption: 'The RStudio interface isn't really as scary as it looks.'
+  caption: 'The RStudio interface isn't as scary as it looks'
   focal_point: ""
   placement: 2
   preview_only: false
