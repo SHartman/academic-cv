@@ -9,9 +9,9 @@ primary = "#c5050c"
 
 # Menu
 menu_primary = "#c5050c"
-menu_text = "#34495e"
-menu_text_active = "#2962ff"
-menu_title = "#2b2b2b"
+menu_text = "#f7f7f7"
+menu_text_active = "#0479a8"
+menu_title = "#f7f7f7"
 
 # Backgrounds
 home_section_odd = "#f7f7f7"
