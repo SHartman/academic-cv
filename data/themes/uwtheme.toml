@@ -10,10 +10,11 @@ primary = "#c5050c"
 # Menu
 menu_primary = "#c5050c"
 menu_text = "#f7f7f7"
-menu_text_active = "#dadfe1"
+menu_text_active = "#0479a8"
 menu_title = "#f7f7f7"
 
 # Backgrounds
 home_section_odd = "#f7f7f7"
-home_section_even = "rgb(247, 247, 247)"
+home_section_even = "#dadfe1"
+
 font = "uwfont"
