@@ -3,13 +3,13 @@ authors:
 - admin
 # categories:
 # - Demo
-date: "2021-04-27"
+date: "2021-05-12"
 image:
   caption: 'The RStudio interface isn't as scary as it looks'
   focal_point: ""
   placement: 2
   preview_only: false
-lastmod: "2021-04-27"
+lastmod: "2021-05-12"
 projects: []
 subtitle: "Or, how I learned to stop worrying and code my website in R Markdown"
 summary: "If you want to make a website that also shows off your R data science skills, you could do worse than writing it with R Markdown and Blogdown."
