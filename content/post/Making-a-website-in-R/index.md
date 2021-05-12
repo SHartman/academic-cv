@@ -17,7 +17,7 @@ subtitle: "Or, how I learned to stop worrying and code my website in R Markdown"
 summary: "If you want to make a website that also shows off your R data science skills, you could do worse than writing it with R Markdown and Blogdown."
 tags:
 - Academic
-title: Making a website using RStudio and open source web tools.
+title: Making a website using RStudio and open source web tools
 ---
 
 ## R Markdown, Blogdown, Netlify and rolling your own CV website
