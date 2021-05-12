@@ -3,11 +3,11 @@
 
 title: The tenth skeletal specimen of *Archaeopteryx*
 subtitle: ''
-summary: ''
 authors:
-- Christophe Hendrickx
+- Gerald Mayr
+- Burkhard Pohl
 - Scott Hartman
-- Octávio Mateus
+- D. Stephan Peters
 
 tags:
 - Phylogeny
