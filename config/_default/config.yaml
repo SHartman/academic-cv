@@ -3,7 +3,7 @@
 # Hugo Documentation: https://gohugo.io/getting-started/configuration/#all-configuration-settings
 # This file is formatted using YAML syntax - learn more at https://learnxinyminutes.com/docs/yaml/
 
-title: Scott Hartman PhD # Website name
+title: Scott Hartman - PhD # Website name
 baseurl: 'https://www.scotthartman.info/' # Website URL
 copyright: '© 2021 Scott Hartman' # Footer text, e.g. '© {year} Me'
 
