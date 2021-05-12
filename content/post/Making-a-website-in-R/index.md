@@ -13,7 +13,7 @@ image:
   preview_only: false
 lastmod: "2021-04-27"
 projects: []
-subtitle: "Or: How I learned to stop worrying and code my website"
+subtitle: "Or, how I learned to stop worrying and code my website"
 summary: "Much of my professional scientific and teaching career is not tied to the skeletal drawings I've produced over the last 25 years, so it seemed appropriate to create a separate site for my courses, academic CV, and research to live in."
 tags:
 - Academic
