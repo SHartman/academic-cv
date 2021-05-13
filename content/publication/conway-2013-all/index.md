@@ -9,8 +9,7 @@ authors:
 - Darren Naish
 - With skeletal illustrations by Scott Hartman
 
-tags:
-- Anatomy
+tags: Anatomy
 categories: []
 date: '2013-06-01'
 lastmod: 
