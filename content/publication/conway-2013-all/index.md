@@ -3,6 +3,7 @@
 
 title: All yesterdays: unique and speculative views of dinosaurs and other prehistoric animals
 subtitle: ''
+summary: ''
 authors:
 - John Conway
 - CM Koseman
