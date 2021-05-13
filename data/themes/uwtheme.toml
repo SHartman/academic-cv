@@ -5,7 +5,7 @@ name = "uwtheme"
 light = true
 
 # Primary
-primary = "#9b0000"
+primary = "#c5050c"
 
 # Menu
 menu_primary = "#9b0000"
