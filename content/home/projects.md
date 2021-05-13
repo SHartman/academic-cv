@@ -10,7 +10,7 @@ headless: false
 weight: 65
 
 title: Projects
-subtitle: 'Check out what I have been working on'
+subtitle: 
 
 content:
   # Page type to display. E.g. project.
