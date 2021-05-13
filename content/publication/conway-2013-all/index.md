@@ -8,7 +8,7 @@ authors:
 - John Conway
 - CM Koseman
 - Darren Naish
-- Skeletal illustrations by Scott Hartman
+- With skeletal diagrams by Scott Hartman
 
 tags: Anatomy
 categories: []
@@ -34,5 +34,5 @@ projects: []
 publishDate: '2013-06-01'
 publication_types:
 - '5'
-publication: '*Lulu Press*'
+publication: '*Irregular Books*'
 ---
