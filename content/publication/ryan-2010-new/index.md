@@ -33,7 +33,7 @@ image:
 projects: []
 publishDate: '2010-06-01'
 publication_types:
-- '2'
+- '6'
 abstract: 'A new chasmosaurine ceratopsid, *Medusaceratops lokii*, is described based on material collected from a bonebed in the Judith River Formation (Campanian) near Havre, Montana. Originally, all ceratopsid material from the bonebed was referred to the basal centrosaurine *Albertaceratops* Ryan 2007, the holotype of which was collected from the Oldman Formation of Alberta, Canada. Reassessment of several key features of parietals from the Montanan bonebed, including the number and shape of the preserved epiparietals, necessitates referral of at least some material from this site to the new taxon. Although the bonebed does include centrosaurine elements (including a lateral parietal ramus and a squamosal) that may eventually be referable to *Albertaceratops*, it appears to be dominated by elements of chasmosaurine affinity. In addition to being the first unequivocal occurrence of a Campanian-aged chasmosaurine ceratopsid in Montana, *Medusaceratops lokii* is also the oldest known Chasmosaurine ceratopsid (approximately 77.5 Ma).'
 publication: '*New Perspectives on Horned Dinosaurs: The Royal Tyrrell Museum Ceratopsian Symposium*'
 url_pdf: https://www.academia.edu/download/31218454/Medusaceratops_lokii.pdf
