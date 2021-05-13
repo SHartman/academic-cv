@@ -3,7 +3,7 @@
 
 title: All Yesterdays
 subtitle: 'Unique and speculative views of dinosaurs and other prehistoric animals'
-summary: ''
+summary: 'All Yesterdays is a book about the way we see dinosaurs and other prehistoric animals. Lavishly illustrated with over sixty original artworks, All Yesterdays aims to challenge our notions of how prehistoric animals looked and behaved. As a critical exploration of palaeontological art, All Yesterdays asks questions about what is probable, what is possible, and what is commonly ignored. Written by palaeozoologist Darren Naish, and palaeontological artists John Conway and C.M. Kosemen, All Yesterdays is scientifically rigorous and artistically imaginative in its approach to fossils of the past - and those of the future.'
 authors:
 - John Conway
 - CM Koseman
@@ -33,7 +33,6 @@ image:
 projects: []
 publishDate: '2013-06-01'
 publication_types:
-- '1'
-abstract: 'All Yesterdays is a book about the way we see dinosaurs and other prehistoric animals. Lavishly illustrated with over sixty original artworks, All Yesterdays aims to challenge our notions of how prehistoric animals looked and behaved. As a critical exploration of palaeontological art, All Yesterdays asks questions about what is probable, what is possible, and what is commonly ignored. Written by palaeozoologist Darren Naish, and palaeontological artists John Conway and C.M. Kosemen, All Yesterdays is scientifically rigorous and artistically imaginative in its approach to fossils of the past - and those of the future.'
-publication: '*Lulu*'
+- '5'
+publication: '*Lulu Press*'
 ---
