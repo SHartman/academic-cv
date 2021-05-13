@@ -5,12 +5,12 @@ name = "uwtheme"
 light = true
 
 # Primary
-primary = "#c5050c"
+primary = "#9b0000"
 
 # Menu
-menu_primary = "#c5050c"
+menu_primary = "#9b0000"
 menu_text = "#f7f7f7"
-menu_text_active = "#646569"
+menu_text_active = "#0479a8"
 menu_title = "#f7f7f7"
 
 # Backgrounds
