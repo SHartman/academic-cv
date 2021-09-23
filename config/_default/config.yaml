@@ -5,7 +5,7 @@
 
 title: Scott Hartman - PhD # Website name
 baseurl: 'https://www.scotthartman.info/' # Website URL
-copyright: '© 2021 Scott Hartman' # Footer text, e.g. '© {year} Me'
+copyright: '© {year} Scott Hartman' # Footer text, e.g. '© {year} Me'
 
 ############################
 ## LANGUAGE
