@@ -25,6 +25,7 @@ src/
   components/              Cladogram, PubTimeline (the range chart), PubItem, …
   pages/                   routes
   lib/                     citation formatting, BibTeX, site settings loader
+wrangler.jsonc             Cloudflare deployment config
 public/
   cv.pdf                   linked from the nav
   _redirects               old Wowchemy URLs → new pages
@@ -44,15 +45,16 @@ scripts/                   add-paper (from a DOI) and add-talk (guided) helpers
 
 ## Deploying (Cloudflare)
 
-Connect this GitHub repository in the Cloudflare dashboard (Workers & Pages → Create →
-Pages → Connect to Git) with:
+The site deploys as a static-assets Worker (config in `wrangler.jsonc`). In the Cloudflare
+dashboard: Workers & Pages → Create → import this GitHub repository, then set:
 
-- Framework preset: **Astro**
+- Project name: **academic-cv** (must match `name` in `wrangler.jsonc`)
 - Build command: `npm run build`
-- Build output directory: `dist`
+- Deploy command: `npx wrangler deploy` (the default)
 
-Node version comes from `.node-version`. Every push to `master` then rebuilds the site.
-Other branches get preview URLs.
+Node version comes from `.node-version`. Every push to the production branch rebuilds the
+site; other branches get preview builds. `npx wrangler dev` serves `dist/` locally exactly
+as Cloudflare will, including the redirects in `public/_redirects`.
 
 ## Design
 
