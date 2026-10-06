@@ -1,0 +1,61 @@
+---
+import '@fontsource-variable/chivo';
+import '@fontsource-variable/chivo-mono';
+import '../styles/global.css';
+import { getImage } from 'astro:assets';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import { site } from '../lib/site';
+import portrait from '../assets/portrait.jpg';
+
+interface Props {
+  title?: string;
+  description?: string;
+  image?: ImageMetadata;
+}
+
+const { title, description = `${site.fullName}: ${site.descriptor}, ${site.position}, ${site.department}, ${site.institution}.`, image } =
+  Astro.props;
+const pageTitle = title ? `${title} · ${site.name}` : `${site.name} · ${site.descriptor}`;
+const canonical = new URL(Astro.url.pathname, Astro.site);
+const og = await getImage({ src: image ?? portrait, width: 1200, format: 'jpg' });
+const ogUrl = new URL(og.src, Astro.site);
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{pageTitle}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonical} />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="alternate" type="application/rss+xml" title={`${site.name} · News`} href="/news/rss.xml" />
+    <link rel="sitemap" href="/sitemap-index.xml" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content={site.name} />
+    <meta property="og:title" content={title ?? site.name} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:image" content={ogUrl} />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="theme-color" content="#ffffff" />
+    <slot name="head" />
+  </head>
+  <body>
+    <a class="skip visually-hidden" href="#main">Skip to content</a>
+    <Header />
+    <main id="main" class="wrap">
+      <slot />
+    </main>
+    <Footer />
+  </body>
+</html>
+
+<style>
+  .skip:focus {
+    position: fixed !important; top: 12px; left: 12px; width: auto; height: auto; clip: auto;
+    padding: 10px 14px; background: var(--ink); color: #fff; z-index: 10; text-decoration: none;
+  }
+</style>

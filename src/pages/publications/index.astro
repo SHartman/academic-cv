@@ -1,0 +1,107 @@
+---
+import Base from '../../layouts/Base.astro';
+import PubTimeline from '../../components/PubTimeline.astro';
+import PubItem from '../../components/PubItem.astro';
+import { allPubs, isPaper, type Pub } from '../../lib/pubs';
+import { getCollection } from 'astro:content';
+
+const pubs = await allPubs();
+const themes = (await getCollection('research')).sort((a, b) => a.data.order - b.data.order);
+const papers = pubs.filter((p) => isPaper(p.data)).length;
+
+const byYear = new Map<number, Pub[]>();
+for (const p of pubs) byYear.set(p.data.year, [...(byYear.get(p.data.year) ?? []), p]);
+---
+
+<Base title="Publications" description="Papers, chapters, books, and conference abstracts by Scott Hartman.">
+  <header class="page-head">
+    <h1>Publications</h1>
+    <p class="lede">
+      {papers} papers, chapters, and books, and {pubs.length - papers} conference abstracts and talks.
+      Also on <a href="https://scholar.google.com/citations?user=C28Tm0QAAAAJ">Google Scholar</a>, or
+      download <a href="/publications.bib" download>everything as BibTeX</a>.
+    </p>
+  </header>
+
+  <PubTimeline pubs={pubs} />
+
+  <div class="filters" role="group" aria-label="Filter publications" hidden>
+    <span class="lbl">Show</span>
+    <button class="chip" data-kind="all" aria-pressed="true">All</button>
+    <button class="chip" data-kind="paper" aria-pressed="false">Papers &amp; books</button>
+    <button class="chip" data-kind="abstract" aria-pressed="false">Abstracts &amp; talks</button>
+    <span class="lbl sep">Research area</span>
+    {themes.map((t) => <button class="chip" data-theme={t.id} aria-pressed="false">{t.data.tip}</button>)}
+  </div>
+
+  <div class="years">
+    {
+      [...byYear].map(([year, items]) => (
+        <section class="year" data-year={year}>
+          <h2 class="mono">{year}</h2>
+          <ol>
+            {items.map((p) => (
+              <PubItem pub={p} />
+            ))}
+          </ol>
+        </section>
+      ))
+    }
+  </div>
+  <p class="empty" hidden>Nothing matches those filters.</p>
+</Base>
+
+<script>
+  const bar = document.querySelector<HTMLElement>('.filters')!;
+  bar.hidden = false; // filters need JS; without it everything is simply listed
+  let kind = 'all';
+  let theme: string | null = null;
+
+  function apply() {
+    let shown = 0;
+    document.querySelectorAll<HTMLElement>('.year').forEach((sec) => {
+      let n = 0;
+      sec.querySelectorAll<HTMLElement>('li.pub').forEach((li) => {
+        const ok = (kind === 'all' || li.dataset.kind === kind) && (!theme || li.dataset.themes!.split(' ').includes(theme));
+        li.hidden = !ok;
+        if (ok) n++;
+      });
+      sec.hidden = n === 0;
+      shown += n;
+    });
+    document.querySelector<HTMLElement>('.empty')!.hidden = shown > 0;
+  }
+
+  bar.addEventListener('click', (e) => {
+    const btn = (e.target as HTMLElement).closest('button');
+    if (!btn) return;
+    if (btn.dataset.kind) {
+      kind = btn.dataset.kind;
+      bar.querySelectorAll<HTMLButtonElement>('[data-kind]').forEach((b) => b.setAttribute('aria-pressed', String(b === btn)));
+    } else {
+      theme = theme === btn.dataset.theme ? null : btn.dataset.theme!;
+      bar.querySelectorAll<HTMLButtonElement>('[data-theme]').forEach((b) => b.setAttribute('aria-pressed', String(b.dataset.theme === theme)));
+    }
+    apply();
+  });
+</script>
+
+<style>
+  .lede a { color: var(--blue); text-underline-offset: 3px; }
+  .filters { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; margin: 0 0 28px; }
+  .filters[hidden] { display: none; }
+  .lbl { font-size: 13px; font-weight: 600; color: var(--muted); margin-right: 4px; }
+  .lbl.sep { margin-left: 18px; }
+  .year { display: grid; grid-template-columns: 88px 1fr; gap: 0 24px; border-top: var(--branch) solid var(--ink); }
+  .year[hidden] { display: none; }
+  .year h2 { margin: 0; padding-top: 16px; font-size: 17px; font-weight: 500; color: var(--blue); position: sticky; top: 0; align-self: start; }
+  .year ol { list-style: none; margin: 0; padding: 0; }
+  .year ol :global(li.pub:first-child) { border-top: 0; }
+  .year ol :global(li.pub[hidden]) { display: none; }
+  .empty { color: var(--muted); padding: 24px 0; }
+  @media (max-width: 600px) {
+    .year { grid-template-columns: 1fr; }
+    .year h2 { position: static; padding-top: 14px; }
+    .lbl.sep { margin-left: 0; flex-basis: 100%; margin-top: 6px; }
+  }
+</style>

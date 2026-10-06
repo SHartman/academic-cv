@@ -1,0 +1,54 @@
+---
+import { site } from '../lib/site';
+
+const nav = [
+  { href: '/research/', label: 'Research' },
+  { href: '/publications/', label: 'Publications' },
+  ...(site.features.software ? [{ href: '/software/', label: 'Software' }] : []),
+  { href: '/news/', label: 'News' },
+  { href: '/about/', label: 'About' },
+];
+const here = Astro.url.pathname;
+---
+
+<header class="site">
+  <div class="wrap bar">
+    <a class="brand" href="/" aria-label={`${site.name}, home`}>
+      <svg width="26" height="22" viewBox="0 0 26 22" aria-hidden="true">
+        <path d="M0 9h5M5 3v12M5 3h21M5 15h7M12 11v8M12 11h14M12 19h14" stroke="currentColor" stroke-width="2.4" fill="none" />
+      </svg>
+      <span>{site.name}</span>
+    </a>
+    <nav aria-label="Main">
+      {
+        nav.map(({ href, label }) => (
+          <a href={href} aria-current={here.startsWith(href) ? 'page' : undefined}>
+            {label}
+          </a>
+        ))
+      }
+      <a class="cv" href="/cv.pdf">CV<span aria-hidden="true"> ↓</span></a>
+    </nav>
+  </div>
+</header>
+
+<style>
+  .bar { display: flex; align-items: center; justify-content: space-between; gap: 16px 32px; min-height: 76px; flex-wrap: wrap; }
+  .brand { display: flex; align-items: center; gap: 12px; text-decoration: none; font-weight: 800; font-size: 18px; letter-spacing: -0.01em; }
+  .brand svg { flex: none; }
+  nav { display: flex; gap: 28px; font-size: 15px; font-weight: 500; }
+  nav a { text-decoration: none; color: var(--muted); padding: 4px 0; border-bottom: 2px solid transparent; }
+  nav a:hover { color: var(--ink); }
+  nav a[aria-current='page'] { color: var(--ink); border-bottom-color: var(--ink); }
+  nav a.cv { color: var(--ink); font-weight: 700; }
+
+  @media (max-width: 760px) {
+    .bar { padding-top: 16px; padding-bottom: 12px; min-height: 0; }
+    nav {
+      width: 100%; gap: 20px; overflow-x: auto; scrollbar-width: none;
+      padding-top: 10px; border-top: 1px solid var(--rule);
+    }
+    nav::-webkit-scrollbar { display: none; }
+    nav a { white-space: nowrap; }
+  }
+</style>

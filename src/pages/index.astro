@@ -1,0 +1,98 @@
+---
+import { getCollection } from 'astro:content';
+import Base from '../layouts/Base.astro';
+import Cladogram from '../components/Cladogram.astro';
+import ThemeCards from '../components/ThemeCards.astro';
+import PubTimeline from '../components/PubTimeline.astro';
+import PubItem from '../components/PubItem.astro';
+import NewsList from '../components/NewsList.astro';
+import SoftwareTable from '../components/SoftwareTable.astro';
+import { site } from '../lib/site';
+import { allPubs } from '../lib/pubs';
+import { visibleTools } from '../lib/software';
+
+const themes = (await getCollection('research')).sort((a, b) => a.data.order - b.data.order);
+const pubs = await allPubs();
+const selected = pubs.filter((p) => p.data.selected);
+const news = (await getCollection('news')).sort((a, b) => b.data.date.localeCompare(a.data.date)).slice(0, 3);
+const tools = await visibleTools();
+
+const tips = themes.map((t) => ({ label: t.data.tip, note: t.data.tipNote, href: `/research/${t.id}/`, color: t.data.color }));
+if (tools.length) tips.push({ label: 'Research software', note: tools.map((t) => t.data.name).join(' · '), href: '/software/', color: 'blue' });
+
+const jsonld = {
+  '@context': 'https://schema.org',
+  '@type': 'Person',
+  name: site.name,
+  honorificSuffix: 'PhD',
+  jobTitle: [site.descriptor, site.position],
+  affiliation: { '@type': 'CollegeOrUniversity', name: site.institution, department: { '@type': 'Organization', name: site.department } },
+  email: `mailto:${site.email}`,
+  url: Astro.site?.href,
+  sameAs: [site.outreachSite, ...site.links.map((l) => l.href).filter((h) => h.startsWith('http'))],
+};
+---
+
+<Base>
+  <script slot="head" type="application/ld+json" set:html={JSON.stringify(jsonld)} />
+
+  <div class="hero">
+    <div class="intro">
+      <h1>{site.name}</h1>
+      <p class="role">
+        {site.descriptor}<br />
+        <span>{site.position} · {site.department} · {site.institution}</span>
+      </p>
+      <p class="stmt">{site.statement}</p>
+      <div class="chips">
+        {site.links.map((l, i) => <a class:list={['chip', { solid: i === 0 }]} href={l.href}>{l.label}</a>)}
+        <a class="chip" href={`mailto:${site.email}`}>Email</a>
+      </div>
+    </div>
+    <Cladogram tips={tips} />
+  </div>
+
+  <section class="block" aria-labelledby="h-research">
+    <h2 class="sec" id="h-research">Research <a class="more" href="/research/">All research →</a></h2>
+    <ThemeCards themes={themes} />
+  </section>
+
+  <section class="block" aria-labelledby="h-pubs">
+    <h2 class="sec" id="h-pubs">Publications <a class="more" href="/publications/">All {pubs.length} →</a></h2>
+    <PubTimeline pubs={pubs} legendHighlight="Selected, below" />
+    <ol class="plain">
+      {selected.map((p) => <PubItem pub={p} year />)}
+    </ol>
+  </section>
+
+  {
+    tools.length > 0 && (
+      <section class="block" aria-labelledby="h-soft">
+        <h2 class="sec blue" id="h-soft">
+          Software <a class="more" href="/software/">All tools →</a>
+        </h2>
+        <SoftwareTable tools={tools} />
+      </section>
+    )
+  }
+
+  <section class="block" aria-labelledby="h-news">
+    <h2 class="sec" id="h-news">News <a class="more" href="/news/">Archive →</a></h2>
+    <NewsList items={news} layout="columns" />
+  </section>
+</Base>
+
+<style>
+  .hero {
+    display: grid; grid-template-columns: 5fr 6fr; gap: 56px; align-items: center;
+    padding: 64px 0 80px; border-bottom: var(--branch) solid var(--ink);
+  }
+  h1 { margin: 0 0 12px; font-size: clamp(44px, 6vw, 68px); line-height: 1; font-weight: 900; letter-spacing: -0.035em; }
+  .role { margin: 0 0 26px; font-size: 18px; font-weight: 600; line-height: 1.45; }
+  .role span { font-weight: 400; color: var(--muted); font-size: 16px; }
+  .stmt { margin: 0 0 28px; font-size: 19px; line-height: 1.5; max-width: 32em; }
+  ol.plain { list-style: none; margin: 0; padding: 0; }
+  @media (max-width: 900px) {
+    .hero { grid-template-columns: 1fr; gap: 40px; padding: 40px 0 56px; }
+  }
+</style>

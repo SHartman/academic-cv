@@ -1,0 +1,44 @@
+# ─────────────────────────────────────────────────────────────────────────────
+# SITE SETTINGS — name, titles, links, and on/off switches for whole sections.
+# ─────────────────────────────────────────────────────────────────────────────
+
+name: Scott Hartman
+fullName: Scott A. Hartman, PhD
+
+# Shown under your name on the home page, and in search-engine metadata.
+descriptor: Paleobiologist & vertebrate paleontologist
+position: Instructional Faculty III
+department: Department of Biology
+institution: University of Wisconsin–Madison
+
+# The paragraph next to the cladogram on the home page.
+statement: >-
+  I study how extinct vertebrates worked, from the anatomy and physiology of
+  dinosaurs to the surprisingly late origin of avian flight, using phylogenetics,
+  biomechanics, and mechanistic physiological models.
+
+# Used for highlighting your name in author lists ("Hartman SA"), and for "me"
+# when you run  npm run add-talk.
+self:
+  family: Hartman
+  givenInitial: S
+  citeAs: Hartman, Scott A.
+
+email: sahartman@wisc.edu
+
+# Buttons under the statement, in this order. Remove a line to hide it.
+links:
+  - { label: CV (PDF), href: /cv.pdf }
+  - { label: Google Scholar, href: "https://scholar.google.com/citations?user=C28Tm0QAAAAJ" }
+  - { label: ORCID, href: "https://orcid.org/0000-0002-7276-4419" }
+  - { label: GitHub, href: "https://github.com/SHartman" }
+  - { label: ResearchGate, href: "https://www.researchgate.net/profile/Scott-Hartman" }
+
+outreachSite: https://www.skeletaldrawing.com
+
+# Whole-section switches.
+features:
+  # Software pages, nav link, home-page section, and the blue "Research software"
+  # branch on the home-page cladogram. Turn on once a tool is public, and set
+  # `visible: true` on that tool's file in src/content/software/.
+  software: false

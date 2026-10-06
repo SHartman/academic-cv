@@ -1,0 +1,147 @@
+---
+import { Image } from 'astro:assets';
+import { getCollection } from 'astro:content';
+import Base from '../../layouts/Base.astro';
+import {
+  allPubs, authorList, bibtex, doiUrl, inline, kindLabel, plain, pubFigure, source, splitName, type Pub,
+} from '../../lib/pubs';
+
+export async function getStaticPaths() {
+  const pubs = await allPubs();
+  return pubs.map((pub) => ({ params: { id: pub.id }, props: { pub } }));
+}
+
+const { pub } = Astro.props as { pub: Pub };
+const d = pub.data;
+const authors = authorList(d);
+const figure = pubFigure(pub.id);
+const themes = (await getCollection('research')).filter((t) => d.themes.includes(t.id as (typeof d.themes)[number]));
+const bib = bibtex(pub);
+const firstPage = d.pages?.split(/[–-]/)[0];
+const lastPage = d.pages?.includes('–') || d.pages?.includes('-') ? d.pages.split(/[–-]+/).pop() : undefined;
+const description = d.abstract ? plain(d.abstract).slice(0, 220).replace(/\s\S*$/, '…') : `${plain(d.title)} (${d.year}).`;
+---
+
+<Base title={plain(d.title)} description={description} image={figure}>
+  <Fragment slot="head">
+    {/* Highwire Press tags: how Google Scholar recognises a publication page */}
+    <meta name="citation_title" content={plain(d.title)} />
+    {d.authors.map((a) => <meta name="citation_author" content={`${splitName(a).family}, ${splitName(a).given}`} />)}
+    <meta name="citation_publication_date" content={`${d.year}${d.month ? `/${String(d.month).padStart(2, '0')}` : ''}`} />
+    {(d.type === 'article' || d.type === 'abstract') && d.journal && <meta name="citation_journal_title" content={d.journal} />}
+    {d.type === 'chapter' && d.book && <meta name="citation_inbook_title" content={d.book} />}
+    {d.type === 'thesis' && d.school && <meta name="citation_dissertation_institution" content={d.school} />}
+    {d.type === 'abstract' && d.venue && <meta name="citation_conference_title" content={d.venue} />}
+    {d.publisher && <meta name="citation_publisher" content={d.publisher} />}
+    {d.volume && <meta name="citation_volume" content={d.volume} />}
+    {d.issue && <meta name="citation_issue" content={d.issue} />}
+    {firstPage && <meta name="citation_firstpage" content={firstPage} />}
+    {lastPage && <meta name="citation_lastpage" content={lastPage} />}
+    {d.doi && <meta name="citation_doi" content={d.doi} />}
+    {d.pdf && <meta name="citation_pdf_url" content={d.pdf} />}
+  </Fragment>
+
+  <header class="page-head">
+    <a class="crumb" href="/publications/">← Publications</a>
+    <p class="kind mono">{kindLabel(d)} · {d.year}</p>
+    <h1 set:html={inline(d.title)} />
+    <p class="au">
+      {
+        authors.map((a, i) => (
+          <>
+            {a.self ? <b>{a.text}</b> : a.text}
+            {i < authors.length - 1 && ', '}
+          </>
+        ))
+      }
+      {d.contribution && <span>. {d.contribution}</span>}
+    </p>
+    <p class="src" set:html={source(d, { full: true })} />
+    <div class="chips">
+      {d.doi && <a class="chip solid" href={doiUrl(d.doi)}>Read the paper</a>}
+      {!d.doi && d.url && <a class="chip solid" href={d.url}>{d.type === 'abstract' ? 'Meeting page' : 'Read'}</a>}
+      {d.pdf && <a class="chip" href={d.pdf}>PDF</a>}
+      <a class="chip" href="#cite">Cite</a>
+    </div>
+  </header>
+
+  <div class="body">
+    <div class="main">
+      {
+        figure && (
+          <figure class="fig">
+            <Image src={figure} alt={d.caption ? plain(d.caption) : `Figure from ${plain(d.title)}`} widths={[480, 800, 1200]} sizes="(max-width: 900px) 100vw, 760px" />
+            {d.caption && <figcaption set:html={inline(d.caption)} />}
+          </figure>
+        )
+      }
+      {
+        d.abstract && (
+          <section>
+            <h2>Abstract</h2>
+            <p class="abstract" set:html={inline(d.abstract)} />
+          </section>
+        )
+      }
+      <section id="cite">
+        <h2>Cite</h2>
+        <div class="bib">
+          <pre class="mono"><code>{bib}</code></pre>
+          <button class="chip copy" type="button" data-copy={bib}>Copy BibTeX</button>
+        </div>
+      </section>
+    </div>
+    {
+      themes.length > 0 && (
+        <aside>
+          <h2>Research area{themes.length > 1 && 's'}</h2>
+          <ul>
+            {themes.map((t) => (
+              <li class={t.data.color}>
+                <a href={`/research/${t.id}/`}>{t.data.title}</a>
+              </li>
+            ))}
+          </ul>
+        </aside>
+      )
+    }
+  </div>
+</Base>
+
+<script>
+  document.querySelectorAll<HTMLButtonElement>('button.copy').forEach((btn) =>
+    btn.addEventListener('click', async () => {
+      try {
+        await navigator.clipboard.writeText(btn.dataset.copy!);
+        btn.textContent = 'Copied';
+      } catch {
+        btn.textContent = 'Select the text above to copy';
+      }
+      setTimeout(() => (btn.textContent = 'Copy BibTeX'), 2000);
+    }),
+  );
+</script>
+
+<style>
+  .kind { margin: 0 0 12px; font-size: 13px; color: var(--muted); }
+  .page-head h1 { font-size: clamp(28px, 3.6vw, 40px); font-weight: 800; letter-spacing: -0.025em; line-height: 1.15; max-width: 34ch; }
+  .au { margin: 20px 0 6px; font-size: 16px; color: var(--muted); max-width: 52em; }
+  .au b { color: var(--ink); }
+  .src { margin: 0 0 24px; font-size: 16px; }
+  .body { display: grid; grid-template-columns: minmax(0, 1fr) 240px; gap: 56px; }
+  .main { max-width: 760px; display: grid; grid-template-columns: minmax(0, 1fr); gap: 48px; }
+  h2 { font-size: 15px; font-weight: 700; margin: 0 0 12px; }
+  .abstract { font-size: 17.5px; line-height: 1.65; margin: 0; }
+  .bib { position: relative; }
+  pre { margin: 0; padding: 18px 20px; background: var(--wash); border-left: var(--branch) solid var(--ink); font-size: 12.5px; line-height: 1.6; overflow-x: auto; white-space: pre; }
+  .copy { margin-top: 12px; }
+  aside ul { list-style: none; margin: 0; padding: 0; }
+  aside li { border-left: var(--branch) solid var(--ink); padding: 2px 0 2px 12px; margin-bottom: 10px; font-weight: 600; }
+  aside li.red { border-color: var(--red); }
+  aside a { text-decoration: none; }
+  aside a:hover { color: var(--blue); }
+  @media (max-width: 900px) {
+    .body { grid-template-columns: 1fr; gap: 40px; }
+    aside { order: -1; }
+  }
+</style>

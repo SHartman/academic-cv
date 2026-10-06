@@ -1,9 +1,17 @@
-# IDEs
-.idea/
-
-# Hugo
-/resources/
-public/
-jsconfig.json
+# Dependencies & build output
 node_modules/
-.Rproj.user
+dist/
+.astro/
+
+# Environment
+.env
+.env.*
+
+# Editors / OS
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+
+# Local design explorations (mention unreleased tools; never commit)
+_explore/

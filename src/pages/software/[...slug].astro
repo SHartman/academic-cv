@@ -1,0 +1,69 @@
+---
+/**
+ * Software index (/software/) and one page per tool (/software/<id>/).
+ * Nothing here is built unless `features.software` is true in site.yaml, and
+ * only tools with `visible: true` get pages.
+ */
+import { render, type CollectionEntry } from 'astro:content';
+import Base from '../../layouts/Base.astro';
+import SoftwareTable from '../../components/SoftwareTable.astro';
+import { visibleTools } from '../../lib/software';
+import { looseDateLabel, pubHref } from '../../lib/pubs';
+
+export async function getStaticPaths() {
+  const tools = await visibleTools();
+  if (!tools.length) return [];
+  return [
+    { params: { slug: undefined }, props: { tools, tool: undefined } },
+    ...tools.map((tool) => ({ params: { slug: tool.id }, props: { tools, tool } })),
+  ];
+}
+
+const { tools, tool } = Astro.props as {
+  tools: CollectionEntry<'software'>[];
+  tool?: CollectionEntry<'software'>;
+};
+const Content = tool ? (await render(tool)).Content : null;
+const STATUS = { 'pre-alpha': 'Pre-alpha', alpha: 'Alpha', beta: 'Beta', released: 'Released' } as const;
+---
+
+{
+  !tool ? (
+    <Base title="Software" description="Open research software by Scott Hartman.">
+      <header class="page-head">
+        <h1>Software</h1>
+        <p class="lede">Open tools for the measurements behind the research: mass, balance, flight performance, and phylogeny.</p>
+      </header>
+      <SoftwareTable tools={tools} />
+    </Base>
+  ) : (
+    <Base title={tool.data.name} description={tool.data.tagline}>
+      <header class="page-head">
+        <a class="crumb" href="/software/">← Software</a>
+        <h1>{tool.data.name}</h1>
+        <p class="lede">{tool.data.tagline}</p>
+        <dl class="facts mono">
+          <div><dt>Status</dt><dd>{STATUS[tool.data.status]}</dd></div>
+          {tool.data.version && <div><dt>Version</dt><dd>{tool.data.version}</dd></div>}
+          {tool.data.released && <div><dt>Released</dt><dd>{looseDateLabel(tool.data.released)}</dd></div>}
+          {tool.data.platforms.length > 0 && <div><dt>Platforms</dt><dd>{tool.data.platforms.join(', ')}</dd></div>}
+          {tool.data.language && <div><dt>Language</dt><dd>{tool.data.language}</dd></div>}
+          {tool.data.license && <div><dt>License</dt><dd>{tool.data.license}</dd></div>}
+        </dl>
+        <div class="chips">
+          {tool.data.download && <a class="chip solid" href={tool.data.download}>Download</a>}
+          {tool.data.repo && <a class="chip" href={tool.data.repo}>Source on GitHub</a>}
+          {tool.data.docs && <a class="chip" href={tool.data.docs}>Documentation</a>}
+          {tool.data.paper && <a class="chip" href={pubHref(tool.data.paper)}>Methods paper</a>}
+        </div>
+      </header>
+      <div class="prose">{Content && <Content />}</div>
+    </Base>
+  )
+}
+
+<style>
+  .facts { display: flex; flex-wrap: wrap; gap: 12px 32px; margin: 24px 0; font-size: 13px; }
+  .facts dt { color: var(--faint); }
+  .facts dd { margin: 2px 0 0; font-weight: 500; }
+</style>
