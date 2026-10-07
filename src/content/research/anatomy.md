@@ -2,11 +2,11 @@
 title: Functional anatomy
 tip: Functional anatomy
 tipNote: Skeletals · mass · muscles
-summary: Skeletal reconstruction, musculature, mass, and center of mass. Putting extinct animals back together.
+summary: Skeletal reconstruction, musculature, and mass. Putting extinct animals back together.
 order: 3
 color: ink
 image: ../../assets/research/anatomy.jpg
-focus: "8% 40%"
+focus: "0% 40%"
 imageAlt: Skeletal reconstruction of Tyrannosaurus with the caudofemoralis muscle and tail cross-sections shown in red
 caption: Reconstructed caudofemoralis musculature in *Tyrannosaurus*.
 ---

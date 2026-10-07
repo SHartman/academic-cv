@@ -28,6 +28,61 @@
 # Order doesn't matter — the site sorts by date. Newest-first is just tidier.
 # ─────────────────────────────────────────────────────────────────────────────
 
+- id: hartman-2015-using
+  type: abstract
+  year: 2015
+  title: Using ecological modelling to quantify thermal constraints on two Late Triassic dinosaurs
+  authors:
+    - Hartman, Scott A.
+    - Lovelace, David M.
+    - Linzmeier, Benjamin J.
+  journal: Journal of Vertebrate Paleontology
+  venue: Society of Vertebrate Paleontology 75th Annual Meeting
+  volume: 35
+  themes: [physiology]
+
+- id: hartman-2016-mechanistic
+  type: abstract
+  year: 2016
+  title: Mechanistic physiological modelling predicts geographic distribution of Late Triassic tetrapods
+  authors:
+    - Hartman, Scott A.
+  venue: Society of Vertebrate Paleontology 76th Annual Meeting
+  themes: [physiology]
+
+- id: hartman-2017-information
+  type: abstract
+  year: 2017
+  title: New information on a paravian theropod from the Morrison Formation
+  authors:
+    - Hartman, Scott A.
+    - Mortimer, Mickey
+    - Wahl, William R.
+    - Lomax, Dean R.
+    - Lovelace, David M.
+  venue: Society of Vertebrate Paleontology 77th Annual Meeting
+  themes: [flight, anatomy]
+
+- id: hartman-2018-testable
+  type: abstract
+  year: 2018
+  title: A testable macroevolutionary framework for character acquisition in the origin of avian flight
+  authors:
+    - Hartman, Scott A.
+    - Mortimer, Mickey
+    - Lovelace, David M.
+  venue: Society of Vertebrate Paleontology 78th Annual Meeting
+  themes: [flight]
+
+- id: hartman-2021-thermal
+  type: abstract
+  year: 2021
+  title: Thermal ecology drove survivorship patterns of terrestrial vertebrates across the end-Triassic extinction
+  authors:
+    - Hartman, Scott A.
+  venue: Triassic Vertebrate Paleontology Meetup
+  themes: [physiology]
+
 - id: grosmougin-2025-microraptor
   type: abstract
   year: 2025
@@ -512,7 +567,7 @@
     - Xu, Xing
     - Hartman, Scott A.
     - Falk, Amanda R.
-  venue: Society of Vertebrate Paleontology Annual Meeting 2016
+  venue: Society of Vertebrate Paleontology 76th Annual Meeting
   themes: [flight]
 
 - id: hendrickx-2015-overview
