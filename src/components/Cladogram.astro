@@ -1,0 +1,89 @@
+---
+/**
+ * A pectinate ("ladder") cladogram whose terminal taxa are links. Branch lines
+ * are SVG stretched to the column width (non-scaling strokes keep them crisp);
+ * labels are ordinary HTML so they stay readable at any screen size.
+ */
+interface Tip {
+  label: string;
+  note?: string;
+  href: string;
+  color: 'ink' | 'red' | 'blue';
+}
+interface Props {
+  tips: Tip[];
+  label?: string;
+}
+
+const { tips, label = 'Research areas' } = Astro.props;
+const ROW = 88; // px per terminal
+const n = tips.length;
+const H = n * ROW;
+const y = tips.map((_, i) => ROW * (i + 0.5));
+
+// Internal nodes k = 0 … n-2. Node k subtends tip k and "everything below".
+const BAR = 80; // where terminal bars begin (viewBox x units, 0–100)
+const step = n > 2 ? (60 - 8) / (n - 2) : 0;
+const nodeX = Array.from({ length: Math.max(n - 1, 0) }, (_, k) => 8 + k * step);
+const mid: number[] = [];
+for (let k = n - 2; k >= 0; k--) mid[k] = (y[k]! + (k === n - 2 ? y[n - 1]! : mid[k + 1]!)) / 2;
+
+const ink = 'var(--ink)';
+const colorOf = (c: Tip['color']) => (c === 'red' ? 'var(--red)' : c === 'blue' ? 'var(--blue)' : ink);
+
+type Seg = { d: string; color: string };
+const segs: Seg[] = [];
+if (n === 1) {
+  segs.push({ d: `M0 ${y[0]}H${BAR}`, color: colorOf(tips[0]!.color) });
+} else {
+  segs.push({ d: `M0 ${mid[0]}H${nodeX[0]}`, color: ink }); // root
+  for (let k = 0; k <= n - 2; k++) {
+    const x = nodeX[k]!;
+    const lower = k === n - 2 ? y[n - 1]! : mid[k + 1]!;
+    segs.push({ d: `M${x} ${y[k]}V${lower}`, color: ink });
+    segs.push({ d: `M${x} ${y[k]}H${BAR}`, color: colorOf(tips[k]!.color) });
+    if (k === n - 2) segs.push({ d: `M${x} ${lower}H${BAR}`, color: colorOf(tips[n - 1]!.color) });
+    else segs.push({ d: `M${x} ${lower}H${nodeX[k + 1]}`, color: ink });
+  }
+}
+---
+
+<nav class="clado" aria-label={label} style={`--rows:${n}; --row:${ROW}px`}>
+  <svg viewBox={`0 0 100 ${H}`} preserveAspectRatio="none" height={H} aria-hidden="true">
+    {segs.map((s) => <path d={s.d} stroke={s.color} />)}
+    {tips.map((t, i) => <path class="bar" d={`M${BAR} ${y[i]}H100`} stroke={colorOf(t.color)} />)}
+  </svg>
+  <ol>
+    {
+      tips.map((t) => (
+        <li>
+          <a href={t.href} class={t.color}>
+            <strong>{t.label}</strong>
+            {t.note && <span>{t.note}</span>}
+          </a>
+        </li>
+      ))
+    }
+  </ol>
+</nav>
+
+<style>
+  .clado { display: grid; grid-template-columns: clamp(110px, 44%, 300px) 1fr; column-gap: 18px; }
+  svg { width: 100%; height: calc(var(--rows) * var(--row)); overflow: visible; }
+  path { fill: none; stroke-width: 2.4; vector-effect: non-scaling-stroke; stroke-linecap: square; }
+  path.bar { stroke-width: 12; stroke-linecap: butt; }
+  ol { list-style: none; margin: 0; padding: 0; display: grid; grid-auto-rows: var(--row); }
+  li { display: flex; align-items: center; }
+  a { text-decoration: none; display: flex; flex-direction: column; gap: 3px; line-height: 1.2; }
+  strong { font-size: 19px; font-weight: 700; letter-spacing: -0.01em; }
+  span { font-size: 14px; color: var(--muted); }
+  a:hover strong { color: var(--blue); }
+  a.blue strong { color: var(--blue); }
+  a.red:hover strong { color: var(--red); }
+
+  @media (max-width: 520px) {
+    .clado { grid-template-columns: 96px 1fr; column-gap: 12px; }
+    strong { font-size: 17px; }
+    span { font-size: 13px; }
+  }
+</style>

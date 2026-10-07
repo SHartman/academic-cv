@@ -1,0 +1,19 @@
+---
+import { getCollection } from 'astro:content';
+import Base from '../../layouts/Base.astro';
+import NewsList from '../../components/NewsList.astro';
+
+const news = (await getCollection('news')).sort((a, b) => b.data.date.localeCompare(a.data.date));
+---
+
+<Base title="News" description="New papers, talks, and other news from Scott Hartman.">
+  <header class="page-head">
+    <h1>News</h1>
+    <p class="lede">New papers, talks, and releases. Also available as an <a href="/news/rss.xml">RSS feed</a>.</p>
+  </header>
+  <NewsList items={news} />
+</Base>
+
+<style>
+  .lede a { color: var(--blue); text-underline-offset: 3px; }
+</style>

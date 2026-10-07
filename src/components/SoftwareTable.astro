@@ -1,0 +1,52 @@
+---
+import type { CollectionEntry } from 'astro:content';
+
+interface Props {
+  tools: CollectionEntry<'software'>[];
+}
+const { tools } = Astro.props;
+const STATUS = { 'pre-alpha': 'Pre-alpha', alpha: 'Alpha', beta: 'Beta', released: 'Released' } as const;
+---
+
+<table class="matrix">
+  <thead>
+    <tr><th scope="col">Tool</th><th scope="col">What it does</th><th scope="col">Status</th><th scope="col">Version</th><th><span class="visually-hidden">Links</span></th></tr>
+  </thead>
+  <tbody>
+    {
+      tools.map(({ id, data }) => (
+        <tr>
+          <th scope="row" class="name"><a href={`/software/${id}/`}>{data.name}</a></th>
+          <td class="desc">{data.tagline}</td>
+          <td><span class:list={['state', { rel: data.status === 'released' }]}>{STATUS[data.status]}</span></td>
+          <td class="v mono">{data.version ?? '—'}</td>
+          <td class="act">
+            {data.download ? <a class="dl" href={data.download}>Download</a> : data.repo && <a href={data.repo}>GitHub →</a>}
+          </td>
+        </tr>
+      ))
+    }
+  </tbody>
+</table>
+
+<style>
+  table { width: 100%; border-collapse: collapse; font-size: 15px; }
+  thead th { text-align: left; font-size: 12.5px; font-weight: 600; color: var(--faint); padding: 0 16px 10px 0; border-bottom: var(--branch) solid var(--ink); }
+  td, tbody th { padding: 18px 16px 18px 0; border-bottom: 1px solid var(--rule); vertical-align: top; text-align: left; }
+  .name a { font-weight: 800; font-size: 19px; letter-spacing: -0.01em; white-space: nowrap; text-decoration: none; }
+  .name a:hover { color: var(--blue); }
+  .desc { color: var(--muted); max-width: 30em; }
+  .v { font-size: 13px; font-weight: 500; }
+  .state { display: inline-flex; align-items: center; gap: 7px; font-size: 13.5px; font-weight: 600; white-space: nowrap; }
+  .state::before { content: ''; width: 9px; height: 9px; border: 2px solid var(--ink); }
+  .state.rel::before { background: var(--blue); border-color: var(--blue); }
+  .act a { font-weight: 700; font-size: 14px; text-decoration: none; white-space: nowrap; }
+  .act a.dl { color: #fff; background: var(--ink); padding: 7px 12px; }
+  .act a.dl:hover { background: var(--blue); }
+  @media (max-width: 760px) {
+    thead { display: none; }
+    tr { display: grid; grid-template-columns: 1fr auto; padding: 14px 0; border-bottom: 1px solid var(--rule); gap: 4px 12px; }
+    td, tbody th { border: 0; padding: 0; }
+    .desc { grid-column: 1 / -1; }
+  }
+</style>

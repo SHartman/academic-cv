@@ -1,0 +1,914 @@
+# ─────────────────────────────────────────────────────────────────────────────
+# PUBLICATIONS — every paper, chapter, book, thesis, and conference abstract.
+#
+# Easiest way to add a paper that has a DOI (fetches everything from Crossref):
+#     npm run add-paper -- 10.7717/peerj.7247
+# Add --selected to feature it on the home page, --theme flight (or physiology,
+# anatomy) to file it under a research area, and --news to post a News item.
+#
+# Talks and posters (no DOI needed):  npm run add-talk   (it asks you questions)
+#
+# To add one by hand, copy an entry below and edit it. Fields:
+#   id        unique; becomes the URL /publications/<id>/   (lastname-year-word)
+#   type      article | chapter | book | thesis | preprint | abstract
+#   format    talk | poster   (optional, for type: abstract)
+#   year, month (month optional)
+#   title     *asterisks* make italics (use for taxon names)
+#   authors   one per line, "Family, Given"
+#   journal / book / venue / school / publisher, volume, issue, pages
+#   doi       bare DOI, e.g. 10.7717/peerj.7247
+#   url       landing page (only needed when there is no DOI)
+#   pdf       link to a free PDF, if you have one
+#   themes    any of: flight, physiology, anatomy
+#   selected  true → shown under "Selected publications" on the home page
+#   caption   caption for the figure, if you drop an image named <id>.jpg/.png
+#             into src/assets/publications/
+#   abstract  optional; shown on the paper's own page
+#
+# Order doesn't matter — the site sorts by date. Newest-first is just tidier.
+# ─────────────────────────────────────────────────────────────────────────────
+
+- id: hartman-2015-using
+  type: abstract
+  year: 2015
+  title: Using ecological modelling to quantify thermal constraints on two Late Triassic dinosaurs
+  authors:
+    - Hartman, Scott A.
+    - Lovelace, David M.
+    - Linzmeier, Benjamin J.
+  journal: Journal of Vertebrate Paleontology
+  venue: Society of Vertebrate Paleontology 75th Annual Meeting
+  volume: 35
+  themes: [physiology]
+
+- id: hartman-2016-mechanistic
+  type: abstract
+  year: 2016
+  title: Mechanistic physiological modelling predicts geographic distribution of Late Triassic tetrapods
+  authors:
+    - Hartman, Scott A.
+  venue: Society of Vertebrate Paleontology 76th Annual Meeting
+  themes: [physiology]
+
+- id: hartman-2017-information
+  type: abstract
+  year: 2017
+  title: New information on a paravian theropod from the Morrison Formation
+  authors:
+    - Hartman, Scott A.
+    - Mortimer, Mickey
+    - Wahl, William R.
+    - Lomax, Dean R.
+    - Lovelace, David M.
+  venue: Society of Vertebrate Paleontology 77th Annual Meeting
+  themes: [flight, anatomy]
+
+- id: hartman-2018-testable
+  type: abstract
+  year: 2018
+  title: A testable macroevolutionary framework for character acquisition in the origin of avian flight
+  authors:
+    - Hartman, Scott A.
+    - Mortimer, Mickey
+    - Lovelace, David M.
+  venue: Society of Vertebrate Paleontology 78th Annual Meeting
+  themes: [flight]
+
+- id: hartman-2021-thermal
+  type: abstract
+  year: 2021
+  title: Thermal ecology drove survivorship patterns of terrestrial vertebrates across the end-Triassic extinction
+  authors:
+    - Hartman, Scott A.
+  venue: Triassic Vertebrate Paleontology Meetup
+  themes: [physiology]
+
+- id: grosmougin-2025-microraptor
+  type: abstract
+  year: 2025
+  month: 7
+  title: New *Microraptor* specimens bring insight into the forewing anatomy and its impact on flight behavior and ecology
+  authors:
+    - Grosmougin, Maxime
+    - Wang, Xiaoli
+    - Zheng, Xiaoting
+    - Kaye, Thomas G.
+    - Chotard, Matthieu
+    - Barlow, Luke A.
+    - Dececchi, T. Alexander
+    - Habib, Michael B.
+    - Zariwala, Juned
+    - Hartman, Scott A.
+    - Xu, Xing
+    - Pittman, Michael
+  journal: Journal of Morphology
+  venue: International Congress of Vertebrate Morphology
+  volume: 286
+  themes: [flight, anatomy]
+  review: Meeting name inferred from Google Scholar's listing (Journal of Morphology 286, July 2025). Confirm the meeting and location, and add format talk or poster.
+
+- id: dececchi-2025-transition
+  type: abstract
+  year: 2025
+  month: 7
+  title: "Transition from occasional to habitual theropod flyers: origin of regular flight use in early birds and their close relatives"
+  authors:
+    - Dececchi, T. Alexander
+    - Habib, Michael B.
+    - Hartman, Scott A.
+    - Larsson, Hans C. E.
+    - Pittman, Michael
+  journal: Journal of Morphology
+  venue: International Congress of Vertebrate Morphology
+  volume: 286
+  themes: [flight]
+  review: Meeting name inferred from Google Scholar's listing (Journal of Morphology 286, July 2025). Confirm the meeting and location, and add format talk or poster.
+
+- id: whisenant-2021-clarification
+  type: abstract
+  year: 2021
+  month: 5
+  title: A clarification of rabbit shoulder musculature for teaching functional anatomy
+  authors:
+    - Whisenant, Jacki
+    - Kufner, Aaron
+    - Hartman, Scott A.
+  journal: The FASEB Journal
+  venue: Experimental Biology 2021 (online)
+  volume: 35
+  issue: S1
+  doi: 10.1096/fasebj.2021.35.s1.03747
+  themes: [anatomy]
+  abstract: >-
+    In instructional anatomy labs across the country, we see an increased use of rabbits in place of
+    cats due to availability for teaching comparative anatomy, and as a result, the number of
+    resources supporting rabbit anatomy education is on the rise. A common discrepancy in many
+    sources requires a deeper investigation of both the physical anatomy and the historical
+    literature regarding certain scapular muscles. A thin, superficial muscle overlies and
+    completely covers the supraspinatus in rabbits and various other mammals, and as such has often
+    been misidentified as the supraspinatus. We present clarification of this muscle in the rabbit
+    as a rising model for anatomical education.
+
+- id: grosmougin-2025-forelimb
+  type: article
+  year: 2025
+  month: 7
+  title: Forelimb feathering, soft tissues, and skeleton of the flying dromaeosaurid *Microraptor*
+  authors:
+    - Grosmougin, Maxime
+    - Wang, Xiaoli
+    - Zheng, Xiaoting
+    - Kaye, Thomas G.
+    - Chotard, Matthieu
+    - Barlow, Luke A.
+    - Dececchi, T. Alexander
+    - Habib, Michael B.
+    - Zariwala, Juned
+    - Hartman, Scott A.
+    - Xu, Xing
+    - Pittman, Michael
+  journal: BMC Ecology and Evolution
+  volume: 25
+  issue: 1
+  pages: 65
+  doi: 10.1186/s12862-025-02397-5
+  themes: [flight, anatomy]
+
+- id: chotard-2025-information
+  type: article
+  year: 2025
+  month: 4
+  title: "New information on the hind limb feathering, soft tissues and skeleton of *Microraptor* (Theropoda: Dromaeosauridae)"
+  authors:
+    - Chotard, Matthieu
+    - Wang, Xiaoli
+    - Zheng, Xiaoting
+    - Kaye, Thomas G.
+    - Grosmougin, Maxime
+    - Barlow, Luke
+    - Kundrát, Martin
+    - Dececchi, T. Alexander
+    - Habib, Michael B.
+    - Zariwala, Juned
+    - Hartman, Scott A.
+    - Xu, Xing
+    - Pittman, Michael
+  journal: BMC Ecology and Evolution
+  volume: 25
+  issue: 1
+  pages: 37
+  doi: 10.1186/s12862-025-02372-0
+  themes: [flight, anatomy]
+  abstract: >-
+    *Microraptor* is known as the most significant example of extended feathering on the legs of a
+    paravian, both fossil and modern. Its striking difference with most paravians contributes to the
+    multiple theories on the function of its conspicuous hind limbs. Recent studies tried to uncover
+    its evolutionary significance, but its anatomy has only been described from a small number of
+    samples. Through the analysis of 16 specimens of *Microraptor*, including 8 previously
+    undescribed specimens, here we provide new information on the structure and number of hindwing
+    feathers within a revised feather taxonomy, including a revised shape of the hindwing
+    *Microraptor* which displays feathers all along the hind limb, except along its pedal digits.
+    Here we describe in detail 6 feather types: metatarsal remiges, long metatarsal coverts, long
+    femoral feathers as well as the first description of long tibial feathers, anterior coverts and
+    minor coverts. Our study of specimens BMNHC PH881 and STM 5–5, 5–75, 6–62 and 6–86 is partially
+    consistent with previous work, but the key difference in this study is a proximal shift of the
+    triangular wing portion formed by the long tibial feathers and the long metatarsal coverts that
+    outlines the joint between the tibiotarsus and metatarsus. This configuration does not exist in
+    any extant or fossil bird, or in any other non-avian paravian described so far, underscoring the
+    uniqueness of *Microraptor*. Unlike previous reconstructions, here the long metatarsal coverts
+    display an asymmetrical close-vanned structure as in the metatarsal remiges. The feathers as
+    preserved are posteriorly projected along the metatarsus and vary between medioposterior and
+    lateroposterior projection along the tibial feathers. The overall configuration of feather
+    layers is only found in *Microraptor*, and the two layers of elongated and asymmetrically vaned
+    feathers linked to the metatarsus are more reminiscent of the forewing of modern birds than of
+    any leg in other fossils and modern taxa. These new observations allow us to better understand
+    the flight, non-flight locomotion and hunting strategies of this iconic ‘four-winged’ dinosaur
+    suggesting *Microraptor* had a complex behaviour that made it adapted to arboreal and
+    terrestrial habitats.
+
+- id: hartman-2022-mechanistic
+  type: article
+  year: 2022
+  month: 11
+  title: Mechanistic Thermal Modeling of Late Triassic Terrestrial Amniotes Predicts Biogeographic Distribution
+  authors:
+    - Hartman, Scott A.
+    - Lovelace, David M.
+    - Linzmeier, Benjamin J.
+    - Mathewson, Paul D.
+    - Porter, Warren P.
+  journal: Diversity
+  volume: 14
+  issue: 11
+  pages: 973
+  doi: 10.3390/d14110973
+  themes: [physiology]
+  selected: true
+  abstract: >-
+    The biogeography of terrestrial amniotes is controlled by historical contingency interacting
+    with paleoclimate, morphology and physiological constraints to dispersal. Thermal tolerance is
+    the intersection between organismal requirements and climate conditions which constrains modern
+    organisms to specific locations and was likely a major control on ancient tetrapods. Here, we
+    test the extent of controls exerted by thermal tolerance on the biogeography of 13 Late Triassic
+    tetrapods using a mechanistic modeling program, Niche Mapper. This program accounts for heat and
+    mass transfer into and out of organisms within microclimates. We model our 13 tetrapods in four
+    different climates (cool and warm at low and high latitudes) using environmental conditions that
+    are set using geochemical proxy-based general circulation models. Organismal conditions for the
+    taxa are from proxy-based physiological values and phylogenetic bracketing. We find that thermal
+    tolerances are a sufficient predictor for the latitudinal distribution of our 13 test taxa in
+    the Late Triassic. Our modeled small mammaliamorph can persist at high latitudes with nocturnal
+    activity and daytime burrowing but large pseudosuchians are excluded because they cannot seek
+    nighttime shelter in burrows to retain elevated body temperatures. Our work demonstrates
+    physiological modeling is useful for quantitative testing of the thermal exclusion hypothesis
+    for tetrapods in deep time.
+
+- id: pittman-2022-preserved
+  type: article
+  year: 2022
+  month: 11
+  title: Preserved soft anatomy confirms shoulder-powered upstroke of early theropod flyers, reveals enhanced early pygostylian upstroke, and explains early sternum loss
+  authors:
+    - Pittman, Michael
+    - Kaye, Thomas G.
+    - Wang, Xiaoli
+    - Zheng, Xiaoting
+    - Dececchi, T. Alexander
+    - Hartman, Scott A.
+  journal: Proceedings of the National Academy of Sciences
+  volume: 119
+  issue: 47
+  pages: e2205476119
+  doi: 10.1073/pnas.2205476119
+  themes: [flight, anatomy]
+  selected: true
+  abstract: >-
+    Anatomy of the first flying feathered dinosaurs, modern birds and crocodylians, proposes an
+    ancestral flight system divided between shoulder and chest muscles, before the upstroke muscles
+    migrated beneath the body. This ancestral flight system featured the dorsally positioned
+    deltoids and supracoracoideus controlling the upstroke and the chest-bound pectoralis
+    controlling the downstroke. Preserved soft anatomy is needed to contextualize the origin of the
+    modern flight system, but this has remained elusive. Here we reveal the soft anatomy of the
+    earliest theropod flyers preserved as residual skin chemistry covering the body and delimiting
+    its margins. These data provide preserved soft anatomy that independently validate the ancestral
+    theropod flight system. The heavily constructed shoulder and more weakly constructed chest in
+    the early pygostylian *Confuciusornis* indicated by a preserved body profile, proposes the first
+    upstroke-enhanced flight stroke. Slender ventral body profiles in the early-diverging birds
+    *Archaeopteryx* and *Anchiornis* suggest habitual use of the pectoralis could not maintain the
+    sternum through bone functional adaptations. Increased wing-assisted terrestrial locomotion
+    potentially accelerated sternum loss through higher breathing requirements. Lower expected
+    downstroke requirements in the early thermal soarer *Sapeornis* could have driven sternum loss
+    through bone functional adaption, possibly encouraged by the higher breathing demands of a
+    *Confuciusornis*-like upstroke. Both factors are supported by a slender ventral body profile.
+    These data validate the ancestral shoulder/chest flight system and provide insights into novel
+    upstroke-enhanced flight strokes and early sternum loss, filling important gaps in our
+    understanding of the appearance of modern flight.
+
+- id: hartman-2021-operationalizing
+  type: abstract
+  year: 2021
+  month: 4
+  title: Operationalizing a late origin of avian flight
+  authors:
+    - Hartman, Scott A.
+    - Fitch, Adam
+  venue: Northeast Natural History Conference (online)
+  themes: [flight]
+  review: The old conference page (eaglehill.us/NENHC_2021) is gone, so the link was removed.
+  abstract: >-
+    Investigations into the origin of avian flight typically center around well known taxa with
+    either historical importance, such as Archaeopteryx, and/or exceptional preservation, such as
+    the dromaeosaurid Microraptor. These investigations often link the origins of avian flight to
+    unknown Middle Jurassic theropods, equating pennaceous-feathered wings, which first appear in
+    pennaraptoran theropods in the late Middle Jurassic, with flight ability. Biomechanical work has
+    shown that aerial locomotion requires far more than flapping wings, and several recent
+    phylogenetic studies have concluded that incipient aerial locomotion in Archaeopteryx and
+    Microraptor was acquired independently of the origin of modern birds. As the origin of avian
+    flight shifts crownward, time-calibrated paravian phylogenies suggest aerial locomotion truly
+    ancestral to avian flight may have been a Late Jurassic or Early Cretaceous phenomenon. This
+    raises the possibility that rather than modeling hypothetical ancestral theropods, the stages of
+    avian flight mechanics may be found among the exceptionally well-documented Early Cretaceous
+    avialan fossil record. Here we present initial results, mapping key features associated with
+    avian flight onto Early Cretaceous avialans. We find evidence for several stages of aerial
+    locomotion restricted to Euavialae, with the fundamental components of the avian flight
+    apparatus only becoming fully present in Ornithothoraces.
+
+- id: lovelace-2020-modeling
+  type: article
+  year: 2020
+  month: 5
+  title: "Modeling Dragons: using linked mechanistic physiological and microclimate models to explore environmental, physiological, and morphological constraints on the early evolution of dinosaurs"
+  authors:
+    - Lovelace, David M.
+    - Hartman, Scott A.
+    - Mathewson, Paul D.
+    - Linzmeier, Benjamin J.
+    - Porter, Warren P.
+  journal: PLOS ONE
+  volume: 15
+  issue: 5
+  pages: e0223872
+  doi: 10.1371/journal.pone.0223872
+  themes: [physiology]
+  selected: true
+  caption: Figure 11. Comparison of daily temperature curves for Varanus and Coelophysis (uninsulated).
+  abstract: >-
+    We employed the widely-tested biophysiological modeling software, Niche Mapper™ to investigate
+    the metabolic function of the Late Triassic dinosaurs Plateosaurus and Coelophysis during global
+    greenhouse conditions. We tested a variety of assumptions about resting metabolic rate, each
+    evaluated within six microclimate models that bound paleoenvironmental conditions at 12° N
+    paleolatitude, as determined by sedimentological and isotopic proxies for climate within the
+    Chinle Formation of the southwestern United States. Sensitivity testing of metabolic variables
+    and simulated “metabolic chamber” analyses support elevated “ratite-like” metabolic rates and
+    intermediate “monotreme-like” core temperature ranges in these species of early saurischian
+    dinosaur. Our results suggest small theropods may have needed partial to full epidermal
+    insulation in temperate environments, while fully grown prosauropods would have likely been heat
+    stressed in open, hot environments and should have been restricted to cooler microclimates such
+    as dense forests or higher latitudes and elevations. This is in agreement with the Late Triassic
+    fossil record and may have contributed to the latitudinal gap in the Triassic prosauropod
+    record.
+
+- id: hartman-2020-macroevolution
+  type: thesis
+  year: 2020
+  title: Macroevolution, thermal ecology and extinction in terrestrial Mesozoic tetrapods
+  authors:
+    - Hartman, Scott A.
+  school: University of Wisconsin–Madison
+  themes: [physiology]
+
+- id: hartman-2019-new
+  type: article
+  year: 2019
+  month: 7
+  title: A new paravian dinosaur from the Late Jurassic of North America supports a late acquisition of avian flight
+  authors:
+    - Hartman, Scott
+    - Mortimer, Mickey
+    - Wahl, William R.
+    - Lomax, Dean R.
+    - Lippincott, Jessica
+    - Lovelace, David M.
+  journal: PeerJ
+  volume: 7
+  pages: e7247
+  doi: 10.7717/peerj.7247
+  themes: [flight, anatomy]
+  selected: true
+  caption: "Figure 4: Primary blocks of WYDICE-DML-001."
+  abstract: >-
+    The last two decades have seen a remarkable increase in the known diversity of basal avialans
+    and their paravian relatives. The lack of resolution in the relationships of these groups
+    combined with attributing the behavior of specialized taxa to the base of Paraves has clouded
+    interpretations of the origin of avialan flight. Here, we describe *Hesperornithoides miessleri*
+    gen. et sp. nov., a new paravian theropod from the Morrison Formation (Late Jurassic) of
+    Wyoming, USA, represented by a single adult or subadult specimen comprising a partial, well-
+    preserved skull and postcranial skeleton. Limb proportions firmly establish *Hesperornithoides*
+    as occupying a terrestrial, non-volant lifestyle. Our phylogenetic analysis emphasizes extensive
+    taxonomic sampling and robust character construction, recovering the new taxon most
+    parsimoniously as a troodontid close to *Daliansaurus*, *Xixiasaurus*, and *Sinusonasus*.
+    Multiple alternative paravian topologies have similar degrees of support, but proposals of basal
+    paravian archaeopterygids, avialan microraptorians, and Rahonavis being closer to Pygostylia
+    than archaeopterygids or unenlagiines are strongly rejected. All parsimonious results support
+    the hypothesis that each early paravian clade was plesiomorphically flightless, raising the
+    possibility that avian flight originated as late as the Late Jurassic or Early Cretaceous.
+
+- id: snively-2019-lower
+  type: article
+  year: 2019
+  month: 2
+  title: Lower rotational inertia and larger leg muscles indicate more rapid turns in tyrannosaurids than in other large theropods
+  authors:
+    - Snively, Eric
+    - O’Brien, Haley
+    - Henderson, Donald M.
+    - Mallison, Heinrich
+    - Surring, Lara A.
+    - Burns, Michael E.
+    - Holtz, Thomas R.
+    - Russell, Anthony P.
+    - Witmer, Lawrence M.
+    - Currie, Philip J.
+    - Hartman, Scott A.
+    - Cotton, John R.
+  journal: PeerJ
+  volume: 7
+  pages: e6432
+  doi: 10.7717/peerj.6432
+  pdf: https://peerj.com/articles/6432.pdf
+  themes: [anatomy]
+  caption: "Figure 1: Methods for digitizing body outlines and calculating mass properties, for “maximum tail width” estimate for *Tyrannosaurus rex*."
+  abstract: >-
+    Tyrannosaurid dinosaurs had large preserved leg muscle attachments and low rotational inertia
+    relative to their body mass, indicating that they could turn more quickly than other large
+    theropods. To compare turning capability in theropods, we regressed agility estimates against
+    body mass, incorporating superellipse-based modeled mass, centers of mass, and rotational
+    inertia (mass moment of inertia). Muscle force relative to body mass is a direct correlate of
+    agility in humans, and torque gives potential angular acceleration. Agility scores therefore
+    include rotational inertia values divided by proxies for (1) muscle force (ilium area and
+    estimates of m. caudofemoralis longus cross-section), and (2) musculoskeletal torque.
+    Phylogenetic ANCOVA (phylANCOVA) allow assessment of differences in agility between
+    tyrannosaurids and non-tyrannosaurid theropods (accounting for both ontogeny and phylogeny). We
+    applied conditional error probabilities a(*p*) to stringently test the null hypothesis of equal
+    agility. Tyrannosaurids consistently have agility index magnitudes twice those of allosauroids
+    and some other theropods of equivalent mass, turning the body with both legs planted or pivoting
+    over a stance leg. PhylANCOVA demonstrates definitively greater agilities in tyrannosaurids, and
+    phylogeny explains nearly all covariance. Mass property results are consistent with those of
+    other studies based on skeletal mounts, and between different figure-based methods (our main
+    mathematical slicing procedures, lofted 3D computer models, and simplified graphical double
+    integration). The capacity for relatively rapid turns in tyrannosaurids is ecologically
+    intriguing in light of their monopolization of large (>400 kg), toothed dinosaurian predator
+    niches in their habitats.
+
+- id: fitch-2019-origin
+  type: abstract
+  year: 2019
+  title: Origin of Pterosauria and stepwise evolution of the pterosaurian flight apparatus
+  authors:
+    - Fitch, Adam
+    - Pritchard, Adam
+    - Hartman, Scott A.
+    - Bevitt, Joseph
+    - Lovelace, David M.
+    - Bhullar, Bhart-Anjan
+  journal: Geological Society of America Abstracts with Programs
+  venue: Geological Society of America Annual Meeting, Phoenix
+  volume: 51
+  doi: 10.1130/abs/2019AM-340860
+  themes: [flight]
+
+- id: pittman-2019-internal
+  type: abstract
+  year: 2019
+  title: Internal and external flight-related anatomy of early theropod fliers revealed by laser-stimulated fluorescence fills knowledge gaps in functional morphology and flight capability
+  authors:
+    - Pittman, Michael
+    - Kaye, Thomas G.
+    - Wang, Xiaoli
+    - Zheng, Xiaoting
+    - Hartman, Scott A.
+    - Xu, Xing
+  venue: Society of Vertebrate Paleontology 79th Annual Meeting
+  themes: [flight]
+
+- id: pittman-2018-adaptive
+  type: abstract
+  year: 2018
+  title: Adaptive diversity in the early evolution of theropod flight
+  authors:
+    - Pittman, Michael
+    - Wang, Xiaoli
+    - Kaye, Thomas G.
+    - Zheng, Xiaoting
+    - Hartman, Scott A.
+    - Navalón, Guillermo
+    - Xu, Xing
+  venue: International Pennaraptoran Dinosaur Symposium, Hong Kong
+  themes: [flight]
+
+- id: pittman-2018-laser
+  type: abstract
+  year: 2018
+  title: Laser-stimulated fluorescence reveals preserved soft tissues which unravel the complexity of avian flight evolution
+  authors:
+    - Pittman, Michael
+    - Kaye, Thomas G.
+    - Wang, Xiaoli
+    - Zheng, Xiaoting
+    - Hartman, Scott A.
+    - Navalón, Guillermo
+    - Xu, Xing
+  venue: 5th International Palaeontological Congress (IPC5), Paris
+  themes: [flight]
+
+- id: wang-2017-basal
+  type: article
+  year: 2017
+  month: 3
+  title: Basal paravian functional anatomy illuminated by high-detail body outline
+  authors:
+    - Wang, Xiaoli
+    - Pittman, Michael
+    - Zheng, Xiaoting
+    - Kaye, Thomas G.
+    - Falk, Amanda R.
+    - Hartman, Scott A.
+    - Xu, Xing
+  journal: Nature Communications
+  volume: 8
+  issue: 1
+  pages: 14576
+  doi: 10.1038/ncomms14576
+  themes: [flight, anatomy]
+  caption: Figure 1 - Reconstructed body outline of basal paravian *Anchiornis* using LSF images
+  abstract: >-
+    Body shape is a fundamental expression of organismal biology, but its quantitative
+    reconstruction in fossil vertebrates is rare. Due to the absence of fossilized soft tissue
+    evidence, the functional consequences of basal paravian body shape and its implications for the
+    origins of avians and flight are not yet fully understood. Here we reconstruct the quantitative
+    body outline of a fossil paravian *Anchiornis* based on high-definition images of soft tissues
+    revealed by laser-stimulated fluorescence. This body outline confirms patagia-bearing arms,
+    drumstick-shaped legs and a slender tail, features that were probably widespread among
+    paravians. Finely preserved details also reveal similarities in propatagial and footpad form
+    between basal paravians and modern birds, extending their record to the Late Jurassic. The body
+    outline and soft tissue details suggest significant functional decoupling between the legs and
+    tail in at least some basal paravians. The number of seemingly modern propatagial traits hint
+    that feathering was a significant factor in how basal paravians utilized arm, leg and tail
+    function for aerodynamic benefit.
+
+- id: kaye-2016-nothing
+  type: abstract
+  year: 2016
+  title: "Nothing but skin and bones: *Anchiornis* body outline revealed by laser fluorescence"
+  authors:
+    - Kaye, Thomas G.
+    - Pittman, Michael
+    - Wang, Xiaoli
+    - Zheng, Xiaoting
+    - Xu, Xing
+    - Hartman, Scott A.
+    - Falk, Amanda R.
+  venue: Society of Vertebrate Paleontology 76th Annual Meeting
+  themes: [flight]
+
+- id: hendrickx-2015-overview
+  type: article
+  year: 2015
+  title: An overview of non-avian theropod discoveries and classification
+  authors:
+    - Hendrickx, Christophe
+    - Hartman, Scott A.
+    - Mateus, Octávio
+  journal: PalArch's Journal of Vertebrate Palaeontology
+  volume: 12
+  issue: 1
+  pages: 1–73
+  pdf: https://www.researchgate.net/publication/281112957_An_overview_of_non-avian_theropod_discoveries_and_classification
+  themes: [anatomy]
+  abstract: >-
+    Theropods form a taxonomically and morphologically diverse group of dinosaurs that include
+    extant birds. Inferred relationships between theropod clades are complex and have changed
+    dramatically over the past thirty years with the emergence of cladistic techniques. Here, we
+    present a brief historical perspective of theropod discoveries and classification, as well as an
+    overview on the current systematics of non-avian thero-pods. The first scientifically recorded
+    theropod remains dating back to the 17th and 18th centuries come from the Middle Jurassic of
+    Oxfordshire and most likely belong to the megalosaurid Megalosaurus. The latter was the first
+    theropod genus to be named in 1824, and subsequent theropod material found before 1850 can all
+    be referred to megalosauroids. In the fifty years from 1856 to 1906, theropod remains were
+    reported from all continents but Antarctica. The clade Theropoda was erected by Othniel Charles
+    Marsh in 1881, and in its current usage corresponds to an intricate ladder-like organi-zation of
+    ‘family’ to ‘superfamily’ level clades. The earliest definitive theropods come from the Carnian
+    of Argentina, and coelophysoids form the first significant theropod radiation from the Late
+    Triassic to their extinction in the Early Jurassic. Most subsequent theropod clades such as
+    ceratosaurs, allosauroids, tyrannosauroids, ornithomimosaurs, therizinosaurs, oviraptorosaurs,
+    dromaeosaurids, and troodontids persisted until the end of the Cretaceous, though the
+    megalosauroid clade did not extend into the Maas-trichtian. Current debates are focused on the
+    monophyly of deinonychosaurs, the posi-tion of dilophosaurids within coelophysoids, and
+    megaraptorans among neovenatorids. Some recent analyses have suggested a placement of
+    dilophosaurids outside Coelo-physoidea, Megaraptora within Tyrannosauroidea, and a paraphyletic
+    Deinonychosauria with troodontids placed more closely to avialans than dromaeosaurids.
+
+- id: conway-2013-all
+  type: book
+  year: 2013
+  title: "All Yesterdays: unique and speculative views of dinosaurs and other prehistoric animals"
+  authors:
+    - Conway, John
+    - Kosemen, C. M.
+    - Naish, Darren
+  contribution: Skeletal diagrams by Scott Hartman
+  publisher: Irregular Books
+  themes: [anatomy]
+  caption: Cover
+  abstract: >-
+    All Yesterdays is a book about the way we see dinosaurs and other prehistoric animals. Lavishly
+    illustrated with over sixty original artworks, All Yesterdays aims to challenge our notions of
+    how prehistoric animals looked and behaved. As a critical exploration of palaeontological art,
+    All Yesterdays asks questions about what is probable, what is possible, and what is commonly
+    ignored. Written by palaeozoologist Darren Naish, and palaeontological artists John Conway and
+    C.M. Kosemen, All Yesterdays is scientifically rigorous and artistically imaginative in its
+    approach to fossils of the past - and those of the future.
+
+- id: hartman-2012-investigating
+  type: abstract
+  year: 2012
+  title: Investigating the impact of competing interpretations of pectoral girdle placement and appendicular function on sauropod head height
+  authors:
+    - Hartman, Scott A.
+  journal: Journal of Vertebrate Paleontology
+  venue: Society of Vertebrate Paleontology Annual Meeting
+  volume: 32
+  issue: suppl.
+  pages: 106
+  review: The Google Drive PDF link from the old site now requires sign-in (private or deleted). Re-share it and add pdf back if you like.
+  themes: [anatomy]
+  caption: Competing models of pectoral girdle placement impact torso volume and orientation.
+  abstract: >-
+    Previous attempts to reconstruct the posture and potential range of motion in the cervical
+    series of sauropod dinosaurs have focused on restoring the osteological neutral position (ONP)
+    of the axial column, as well as attempts to link ONP with the degree of habitual vertebral
+    flexion observed in extant vertebrates (Stevens & Parrish, 2005; Taylor et al, 2009). While
+    placement of the pectoral girdle has been examined in depth (e.g. Bonnan et al., 2005), the roll
+    of differing interpretations of appendicular posture has been largely ignored. To evaluate the
+    impact of competing functional interpretations of the pectoral girdle and appendicular skeleton,
+    a quantitative analysis was conducted on the three most commonly used interpretations of
+    pectoral girdle placement in the literature, and several models of limb kinematics. Testing was
+    carried out on a 3D digital data set of Camarasaurus, as well as dimensionally-accurate skeletal
+    diagrams of Camarasaurus and several other neosauropods to increase taxonomic sampling. Results
+    show that differing interpretations of the angle of the scapula on the body had a minimal impact
+    on the elevation of the presacral column, while the location of the pectoral girdle had a
+    significant impact, with more ventrally and posteriorly located pectoral girdles leading to
+    progressively higher head height. Published interpretations of forelimb posture in sauropods
+    vary mostly in the orientation of the humerus and the degree of eversion in the elbow (e.g.
+    Bonnan, 2003). Neither was found to have a significant impact on head height. Hind limb
+    kinematics were found to have a larger impact on head height, as knee and ankle flexure reduced
+    pelvic height, which in turn raised the cervical series. Differences in restoring the pes of
+    sauropods differ markedly, from digitigrade to plantigrade; lowering the foot into a plantigrade
+    stance was found to increase head height. These findings demonstrate that restoring the axial
+    column alone is insufficient to accurately estimate head height in sauropods. Competing
+    interpretations of pectoral girdle position and hind limb kinematics can influence the angle of
+    the cervical series significantly, suggesting that a more holistic approach must be taken with
+    regard to sauropod neck posture.
+
+- id: ryan-2010-new
+  type: chapter
+  year: 2010
+  title: A new chasmosaurine ceratopsid from the Judith River Formation, Montana
+  authors:
+    - Ryan, Michael J.
+    - Russell, Anthony P.
+    - Hartman, Scott A.
+  book: "New Perspectives on Horned Dinosaurs: The Royal Tyrrell Museum Ceratopsian Symposium"
+  publisher: Indiana University Press
+  pages: 181–188
+  pdf: https://www.academia.edu/download/31218454/Medusaceratops_lokii.pdf
+  themes: [anatomy]
+  caption: "FIGURE 12.2. *Medusaceratops lokii* parietals. (A) Dorsal and (B) ventral right parietal ramus, WDC-DJR-001; (C) ventral and (D) dorsal left parietal process P1, WDC-DJR-002. Inset is a reconstruction of the frill based on WDC-DJR-001. Pl-3: parietal processes #1-3; SQC: squamosal contact. Scale bar is 10 cm."
+  abstract: >-
+    A new chasmosaurine ceratopsid, *Medusaceratops lokii*, is described based on material collected
+    from a bonebed in the Judith River Formation (Campanian) near Havre, Montana. Originally, all
+    ceratopsid material from the bonebed was referred to the basal centrosaurine *Albertaceratops*
+    Ryan 2007, the holotype of which was collected from the Oldman Formation of Alberta, Canada.
+    Reassessment of several key features of parietals from the Montanan bonebed, including the
+    number and shape of the preserved epiparietals, necessitates referral of at least some material
+    from this site to the new taxon. Although the bonebed does include centrosaurine elements
+    (including a lateral parietal ramus and a squamosal) that may eventually be referable to
+    *Albertaceratops*, it appears to be dominated by elements of chasmosaurine affinity. In addition
+    to being the first unequivocal occurrence of a Campanian-aged chasmosaurine ceratopsid in
+    Montana, *Medusaceratops lokii* is also the oldest known Chasmosaurine ceratopsid (approximately
+    77.5 Ma).
+
+- id: mayr-2007-tenth
+  type: article
+  year: 2007
+  month: 1
+  title: The tenth skeletal specimen of *Archaeopteryx*
+  authors:
+    - MAYR, GERALD
+    - POHL, BURKHARD
+    - HARTMAN, SCOTT
+    - PETERS, D. STEFAN
+  journal: Zoological Journal of the Linnean Society
+  volume: 149
+  issue: 1
+  pages: 97-116
+  doi: 10.1111/j.1096-3642.2006.00245.x
+  themes: [flight, anatomy]
+  caption: Figure 4. *Archaeopteryx siemensii* Dames, 1897, Thermopolis specimen (WDC-CSG-100). Skull. A, Ultraviolet-induced fluorescence photograph. B, Interpretative drawing. C, Stereo pair.
+  abstract: >-
+    We describe the tenth skeletal specimen of the Upper Jurassic Archaeopterygidae. The almost
+    complete and well-preserved skeleton is assigned to *Archaeopteryx siemensii* Dames, 1897 and
+    provides significant new information on the osteology of the Archaeopterygidae. As is evident
+    from the new specimen, the palatine of *Archaeopteryx* was tetraradiate as in non-avian
+    theropods, and not triradiate as in other avians. Also with respect to the position of the
+    ectopterygoid, the data obtained from the new specimen lead to a revision of a previous
+    reconstruction of the palate of *Archaeopteryx*. The morphology of the coracoid and that of the
+    proximal tarsals is, for the first time, clearly visible in the new specimen. The new specimen
+    demonstrates the presence of a hyperextendible second toe in *Archaeopteryx*. This feature is
+    otherwise known only from the basal avian *Rahonavis* and deinonychosaurs (Dromaeosauridae and
+    Troodontidae), and its presence in *Archaeopteryx* provides additional evidence for a close
+    relationship between deinonychosaurs and avians. The new specimen also shows that the first toe
+    of *Archaeopteryx* was not fully reversed but spread medially, supporting previous assumptions
+    that *Archaeopteryx* was only facultatively arboreal. Finally, we comment on the taxonomic
+    composition of the Archaeopterygidae and conclude that *Archaeopteryx bavarica* Wellnhofer, 1993
+    is likely to be a junior synonym of *A. siemensii*, and *Wellnhoferia grandis* Elzanowski, 2001
+    a junior synonym of *A. lithographica* von Meyer, 1861.
+
+- id: hartman-2007-re
+  type: abstract
+  year: 2007
+  title: "Re-evaluating wing shape in *Archaeopteryx*: information from the Thermopolis specimen"
+  authors:
+    - Hartman, Scott A.
+  journal: Journal of Vertebrate Paleontology
+  venue: Society of Vertebrate Paleontology Annual Meeting
+  volume: 27
+  issue: 3 suppl.
+  pages: 87A
+  themes: [flight]
+
+- id: lovelace-2007-morphology
+  type: article
+  year: 2007
+  title: Morphology of a specimen of *Supersaurus* (Dinosauria, Sauropoda) from the Morrison Formation of Wyoming, and a re-evaluation of diplodocid phylogeny
+  authors:
+    - Lovelace, David M.
+    - Hartman, Scott A.
+    - Wahl, William R.
+  journal: Arquivos do Museu Nacional, Rio de Janeiro
+  volume: 65
+  issue: 4
+  pages: 527–544
+  pdf: https://www.researchgate.net/profile/David_Lovelace2/publication/237468705_Morphology_of_a_specimen_of_Supersaurus_Dinosauria_Sauropoda_from_the_Morrison_Formation_of_Wyoming_and_a_re-evaluation_of_diplodocid_phylogeny/links/00b7d5282430699e62000000/Morphology-of-a-specimen-of-Supersaurus-Dinosauria-Sauropoda-from-the-Morrison-Formation-of-Wyoming-and-a-re-evaluation-of-diplodocid-phylogeny.pdf
+  themes: [anatomy]
+  caption: Figure 15. Multiple view skeletal reconstruction used to guide the construction of a physical model for volumetric measurements used in mass estimate.
+  abstract: >-
+    A new specimen of *Supersaurus vivianae* is described, providing additional information about
+    the osteology of *Supersaurus*. The single *Supersaurus* individual that the WDC quarry produced
+    allows a reexamination of elements referred to *Supersaurus* from the Dry Mesa quarry. The
+    osteology supports maintaining the generic distinction of *Supersaurus*. Phylogenetic evaluation
+    finds a monophyletic Apatosaurinae containing [*Apatosaurus* + *Supersaurus*] + *Suuwassea*, and
+    a monophyletic Diplodocinae containing [*Diplodocus* + *Seismosaurus*] + *Barosaurus*, although
+    the generic distinction of *Seismosaurus* is not supported in the current analysis.
+
+- id: hartman-2006-estimating
+  type: abstract
+  year: 2006
+  title: "Estimating osteological neutral position in sauropod axial skeletons: comparing two-dimensional and three-dimensional methods of analysis"
+  authors:
+    - Hartman, Scott A.
+    - Shinkle, Levi
+  journal: Journal of Vertebrate Paleontology
+  venue: Society of Vertebrate Paleontology Annual Meeting
+  volume: 26
+  issue: 3 suppl.
+  pages: 73A
+  themes: [anatomy]
+
+- id: shinkle-2006-utilizing
+  type: abstract
+  year: 2006
+  title: Utilizing 3D laser scans and commercially available software to create and analyze virtual morphological data sets
+  authors:
+    - Shinkle, Levi
+    - Hartman, Scott A.
+  journal: Journal of Vertebrate Paleontology
+  venue: Society of Vertebrate Paleontology Annual Meeting
+  volume: 26
+  issue: 3 suppl.
+  pages: 125A
+  themes: [anatomy]
+
+- id: wegweiser-2006-duckbill
+  type: article
+  year: 2006
+  title: "Duckbill dinosaur chin skin scales: ups, downs and arounds of surficial morphology of Upper Cretaceous Lance Formation dinosaur skin"
+  authors:
+    - Wegweiser, Marilyn D.
+    - Hartman, Scott A.
+    - Lovelace, David M.
+  journal: New Mexico Museum of Natural History and Science Bulletin
+  volume: 35
+  pages: 119–125
+  themes: [anatomy]
+
+- id: wegweiser-2006-late
+  type: abstract
+  year: 2006
+  title: "Late Cretaceous duckbill mandibles and duckbill dinosaur chin skin scales: cheeks, chewing kinetics, and skin"
+  authors:
+    - Wegweiser, Marilyn D.
+    - Breithaupt, Brent H.
+    - Wahl, William R.
+    - Hartman, Scott A.
+  journal: Journal of Vertebrate Paleontology
+  venue: Society of Vertebrate Paleontology Annual Meeting
+  volume: 26
+  issue: 3 suppl.
+  pages: 137A
+  themes: [anatomy]
+  review: Old BibTeX listed Breithaupt twice; de-duplicated — please check the author list.
+
+- id: hartman-2005-phylogenetic
+  type: abstract
+  year: 2005
+  title: Phylogenetic assessment of a maniraptoran from the Morrison Formation
+  authors:
+    - Hartman, Scott A.
+    - Lovelace, David M.
+    - Wahl, William R.
+  journal: Journal of Vertebrate Paleontology
+  venue: Society of Vertebrate Paleontology Annual Meeting
+  volume: 25
+  issue: 3 suppl.
+  pages: 67A–68A
+  themes: [flight]
+
+- id: lovelace-2005-revised
+  type: abstract
+  year: 2005
+  title: Revised osteology of *Supersaurus vivianae*
+  authors:
+    - Lovelace, David M.
+    - Hartman, Scott A.
+    - Wahl, William R.
+  journal: Journal of Vertebrate Paleontology
+  venue: Society of Vertebrate Paleontology Annual Meeting
+  volume: 25
+  issue: 3 suppl.
+  pages: 84A–85A
+  themes: [anatomy]
+
+- id: hartman-2004-stance
+  type: abstract
+  year: 2004
+  title: "Stance and carriage in *Brachylophosaurus*: evidence from articulated specimens"
+  authors:
+    - Hartman, Scott A.
+  journal: Journal of Vertebrate Paleontology
+  venue: Society of Vertebrate Paleontology Annual Meeting
+  volume: 24
+  issue: 3 suppl.
+  pages: 68A
+  themes: [anatomy]
+
+- id: vietti-2004-new
+  type: abstract
+  year: 2004
+  title: "A new diplodocid braincase (Dinosauria: Sauropoda) from the Morrison Formation of north-western Wyoming"
+  authors:
+    - Vietti, Laura
+    - Hartman, Scott A.
+  journal: Journal of Vertebrate Paleontology
+  venue: Society of Vertebrate Paleontology Annual Meeting
+  volume: 24
+  issue: 3 suppl.
+  pages: 125A
+  themes: [anatomy]
+
+- id: lovelace-2003-evidence
+  type: abstract
+  year: 2003
+  title: Evidence for costal pneumaticity in a diplodocid dinosaur (*Supersaurus vivianae*)
+  authors:
+    - Lovelace, David M.
+    - Wahl, William R.
+    - Hartman, Scott A.
+  journal: Journal of Vertebrate Paleontology
+  venue: Society of Vertebrate Paleontology Annual Meeting
+  volume: 23
+  issue: 3 suppl.
+  pages: 73A
+  themes: [anatomy]
+
+- id: hartman-2000-primary
+  type: abstract
+  year: 2000
+  title: Primary and caudal feathers as locomotory adaptations in maniraptoran theropods
+  authors:
+    - Hartman, Scott A.
+  journal: Journal of Vertebrate Paleontology
+  volume: 20
+  issue: 3 suppl.
+  venue: Society of Vertebrate Paleontology Annual Meeting
+  themes: [flight]
+  review: Added from the text of the old Origin of Avian Flight page. Check co-authors and add the page number.

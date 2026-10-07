@@ -1,0 +1,27 @@
+# Old Wowchemy/Hugo URLs → new pages, so existing links and search results keep working.
+# (Cloudflare reads this file; first match wins.)
+
+/media/resume.pdf                                   /cv.pdf                                         301
+/uploads/resume.pdf                                 /cv.pdf                                         301
+
+/publication/christophe-2015-overview/*             /publications/hendrickx-2015-overview/          301
+/publication/                                       /publications/                                  301
+/publication/*                                      /publications/:splat                            301
+/publication-type/*                                 /publications/                                  301
+
+/project/Origin-of-Avian-Flight/*                   /research/flight/                               301
+/project/Mechanistic-Physiological-Modeling/*       /research/physiology/                           301
+/project/Functional-Anatomy/*                       /research/anatomy/                              301
+/project/*                                          /research/                                      301
+
+/talk/*                                             /publications/hartman-2021-operationalizing/    301
+/event/*                                            /publications/hartman-2021-operationalizing/    301
+/post/*                                             /news/                                          301
+/authors/*                                          /about/                                         301
+/author/*                                           /about/                                         301
+/tag/*                                              /publications/                                  301
+/category/*                                         /publications/                                  301
+/privacy/                                           /                                               301
+/terms/                                             /                                               301
+/slides/*                                           /                                               301
+/index.xml                                          /news/rss.xml                                   301

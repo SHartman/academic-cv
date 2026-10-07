@@ -1,0 +1,108 @@
+/* ──────────────────────────────────────────────────────────────────────────
+   scotthartman.info — "Cladogram" design system.
+   Black ink on white, with the avialan blue and volant red from the paravian
+   phylogeny figures. Chivo for text, Chivo Mono for data (years, DOIs, versions).
+   ────────────────────────────────────────────────────────────────────────── */
+
+:root {
+  --bg: #ffffff;
+  --ink: #0f1419;
+  --muted: #5b6672;
+  --faint: #6f7882;        /* ≥ 4.5:1 on white */
+  --rule: #e2e6ea;
+  --wash: #f5f7f8;
+  --blue: #1f4fd8;
+  --red: #c62a1f;
+
+  --sans: 'Chivo Variable', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --mono: 'Chivo Mono Variable', ui-monospace, 'Cascadia Mono', Menlo, monospace;
+
+  --max: 1200px;
+  --gut: clamp(16px, 4vw, 32px);
+  --branch: 2px;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; scroll-padding-top: 24px; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font: 400 17px/1.55 var(--sans);
+  text-rendering: optimizeLegibility;
+}
+img, svg { max-width: 100%; }
+img { height: auto; display: block; }
+a { color: inherit; }
+:focus-visible { outline: 2.5px solid var(--blue); outline-offset: 3px; }
+::selection { background: #1f4fd833; }
+
+.wrap { max-width: var(--max); margin-inline: auto; padding-inline: var(--gut); }
+.visually-hidden { position: absolute !important; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+.mono { font-family: var(--mono); }
+
+/* ── Section heads: a terminal node and a branch running to the margin ── */
+.sec {
+  display: flex; align-items: center; gap: 14px;
+  margin: 0 0 32px;
+  font-size: 26px; font-weight: 800; letter-spacing: -0.02em; line-height: 1.2;
+}
+.sec::before { content: ''; width: 12px; height: 12px; background: var(--ink); flex: none; }
+.sec::after { content: ''; height: var(--branch); background: var(--ink); flex: 1; min-width: 24px; }
+.sec .more { order: 2; font-size: 14px; font-weight: 600; color: var(--muted); text-decoration: none; white-space: nowrap; letter-spacing: 0; }
+.sec .more:hover { color: var(--blue); }
+.sec.red::before { background: var(--red); }
+.sec.blue::before { background: var(--blue); }
+
+/* ── Page headers (inner pages) ── */
+.page-head { padding: 56px 0 40px; border-bottom: var(--branch) solid var(--ink); margin-bottom: 56px; }
+.page-head .crumb { font-size: 14px; font-weight: 600; color: var(--muted); text-decoration: none; display: inline-block; margin-bottom: 18px; }
+.page-head .crumb:hover { color: var(--blue); }
+.page-head h1 { margin: 0; font-size: clamp(36px, 5vw, 56px); font-weight: 900; letter-spacing: -0.035em; line-height: 1.02; max-width: 22ch; }
+.page-head .lede { margin: 18px 0 0; font-size: 19px; color: var(--muted); max-width: 40em; }
+
+/* ── Buttons / chips ── */
+.chips { display: flex; flex-wrap: wrap; gap: 8px; }
+.chip {
+  display: inline-flex; align-items: center; gap: 6px;
+  text-decoration: none; font-size: 14px; font-weight: 600; line-height: 1;
+  padding: 9px 13px; border: 1.5px solid var(--ink); background: var(--bg); color: var(--ink);
+  cursor: pointer; font-family: var(--sans);
+}
+.chip:hover { background: var(--ink); color: #fff; }
+.chip.solid { background: var(--ink); color: #fff; }
+.chip.solid:hover { background: var(--blue); border-color: var(--blue); }
+.chip[aria-pressed='true'] { background: var(--ink); color: #fff; }
+
+/* ── Long-form text from Markdown ── */
+.prose { font-size: 18px; line-height: 1.65; max-width: 42em; }
+.prose p { margin: 0 0 1.1em; }
+.prose h2 { font-size: 22px; font-weight: 800; letter-spacing: -0.015em; margin: 2em 0 0.6em; }
+.prose a { color: var(--blue); text-underline-offset: 3px; text-decoration-thickness: 1px; }
+.prose a:hover { text-decoration-thickness: 2px; }
+.prose ul { padding-left: 1.2em; margin: 0 0 1.1em; }
+.prose li { margin-bottom: 0.35em; }
+.prose figure { margin: 2em 0; }
+.prose img { border: 1px solid var(--rule); background: #fff; }
+.prose figcaption { color: var(--muted); font-size: 14.5px; line-height: 1.45; margin-top: 10px; }
+
+/* ── Figures ── */
+figure.fig { margin: 0; }
+figure.fig img { border: 1px solid var(--rule); background: #fff; }
+figure.fig figcaption { font-size: 14px; color: var(--muted); margin-top: 10px; line-height: 1.45; }
+
+main { padding-bottom: 32px; }
+section.block { padding: 72px 0 8px; }
+
+@media (max-width: 700px) {
+  body { font-size: 16px; }
+  .sec { font-size: 22px; gap: 10px; margin-bottom: 24px; }
+  .sec::before { width: 10px; height: 10px; }
+  section.block { padding-top: 56px; }
+  .page-head { padding: 36px 0 28px; margin-bottom: 40px; }
+  .prose { font-size: 17px; }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .chip, .sec .more { transition: background-color .15s, color .15s, border-color .15s; }
+}

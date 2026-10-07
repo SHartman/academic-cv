@@ -1,0 +1,27 @@
+---
+import { site } from '../lib/site';
+const year = new Date().getFullYear();
+const outreachHost = new URL(site.outreachSite).hostname.replace(/^www\./, '');
+---
+
+<footer class="site">
+  <div class="wrap row">
+    <p>
+      © {year} {site.name} · {site.department}, {site.institution}
+      <br /><a href={`mailto:${site.email}`}>{site.email}</a> · <a href="/news/rss.xml">RSS</a>
+    </p>
+    <p class="out">
+      Skeletal reconstructions and paleoart live at <a href={site.outreachSite}><b>{outreachHost}</b> →</a>
+    </p>
+  </div>
+</footer>
+
+<style>
+  footer { margin-top: 72px; border-top: var(--branch) solid var(--ink); }
+  .row { display: flex; justify-content: space-between; align-items: flex-start; gap: 16px 40px; flex-wrap: wrap; padding-top: 28px; padding-bottom: 56px; }
+  p { margin: 0; font-size: 14px; color: var(--muted); line-height: 1.7; }
+  a { color: var(--muted); text-underline-offset: 3px; }
+  a:hover { color: var(--blue); }
+  .out a { color: var(--ink); text-decoration: none; }
+  .out a:hover { color: var(--blue); }
+</style>

@@ -1,0 +1,17 @@
+---
+import Base from '../layouts/Base.astro';
+---
+
+<Base title="Page not found">
+  <header class="page-head">
+    <h1>Missing from the fossil record</h1>
+    <p class="lede">
+      That page doesn't exist, or it was lost when this site was rebuilt. Try
+      <a href="/publications/">Publications</a>, <a href="/research/">Research</a>, or the <a href="/">home page</a>.
+    </p>
+  </header>
+</Base>
+
+<style>
+  .lede a { color: var(--blue); text-underline-offset: 3px; }
+</style>

@@ -1,0 +1,38 @@
+---
+import { Image } from 'astro:assets';
+import type { CollectionEntry } from 'astro:content';
+import { inline } from '../lib/pubs';
+
+interface Props {
+  themes: CollectionEntry<'research'>[];
+}
+const { themes } = Astro.props;
+---
+
+<div class="themes">
+  {
+    themes.map((t) => (
+      <a class:list={['theme', t.data.color]} href={`/research/${t.id}/`}>
+        <div class="fig">
+          <Image src={t.data.image} alt={t.data.imageAlt} widths={[400, 720]} sizes="(max-width: 760px) 100vw, 360px" style={`object-position:${t.data.focus}`} />
+        </div>
+        <h3>{t.data.title}</h3>
+        <p set:html={inline(t.data.summary)} />
+      </a>
+    ))
+  }
+</div>
+
+<style>
+  .themes { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; }
+  .theme { border-left: var(--branch) solid var(--ink); padding-left: 20px; text-decoration: none; display: block; }
+  .theme.red { border-color: var(--red); }
+  .theme.blue { border-color: var(--blue); }
+  .fig { aspect-ratio: 16 / 10; overflow: hidden; margin-bottom: 16px; background: #fff; }
+  .fig :global(img) { width: 100%; height: 100%; object-fit: cover; object-position: 50% 30%; transition: transform .3s; }
+  h3 { margin: 0 0 6px; font-size: 19px; font-weight: 700; letter-spacing: -0.01em; }
+  p { margin: 0; font-size: 15px; color: var(--muted); line-height: 1.45; }
+  .theme:hover h3 { color: var(--blue); }
+  @media (prefers-reduced-motion: no-preference) { .theme:hover .fig :global(img) { transform: scale(1.03); } }
+  @media (max-width: 760px) { .themes { grid-template-columns: 1fr; gap: 36px; } }
+</style>

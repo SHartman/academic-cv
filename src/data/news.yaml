@@ -1,0 +1,44 @@
+# ─────────────────────────────────────────────────────────────────────────────
+# NEWS — short dated items, newest first. The home page shows the latest three.
+#
+#   - date: 2026-10          # YYYY, YYYY-MM, or YYYY-MM-DD
+#     text: One or two sentences. *Asterisks* for italics, [links](https://…) work.
+#     link: /publications/some-id/   # optional "more" link
+#
+# `npm run add-paper -- <DOI> --news` writes one of these for you.
+# ─────────────────────────────────────────────────────────────────────────────
+
+- date: 2026-10
+  text: This site has been rebuilt from the ground up, with an up-to-date publication list.
+
+- date: 2025-07
+  text: New in *BMC Ecology and Evolution* with Maxime Grosmougin, Michael Pittman and colleagues. The forelimb feathering, soft tissues, and skeleton of *Microraptor*.
+  link: /publications/grosmougin-2025-forelimb/
+
+- date: 2025-04
+  text: New in *BMC Ecology and Evolution* with Matthieu Chotard, Michael Pittman and colleagues. Sixteen specimens reveal the hind-limb feathering of *Microraptor*.
+  link: /publications/chotard-2025-information/
+
+- date: 2022-11-14
+  text: New in *PNAS* with Michael Pittman and colleagues. Laser-stimulated fluorescence confirms a shoulder-powered upstroke in early theropod flyers.
+  link: /publications/pittman-2022-preserved/
+
+- date: 2022-11-12
+  text: New in *Diversity*. Mechanistic thermal models predict where Late Triassic amniotes could, and couldn't, live.
+  link: /publications/hartman-2022-mechanistic/
+
+- date: 2021-04
+  text: Talk with Adam Fitch at the Northeast Natural History Conference, "Operationalizing a late origin of avian flight."
+  link: /publications/hartman-2021-operationalizing/
+
+- date: 2020-05
+  text: New in *PLOS ONE*, "Modeling Dragons." Linked microclimate and physiological models of Late Triassic dinosaurs.
+  link: /publications/lovelace-2020-modeling/
+
+- date: 2020
+  text: Completed my PhD in Geoscience (paleobiology) at UW–Madison, "Macroevolution, thermal ecology and extinction in terrestrial Mesozoic tetrapods."
+  link: /publications/hartman-2020-macroevolution/
+
+- date: 2019-07
+  text: New in *PeerJ*, *Hesperornithoides miessleri*, a new paravian from the Late Jurassic of Wyoming that supports a late origin of avian flight.
+  link: /publications/hartman-2019-new/

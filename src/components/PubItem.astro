@@ -1,0 +1,57 @@
+---
+import { type Pub, authorList, inline, source, doiUrl, pubHref, isPaper } from '../lib/pubs';
+
+interface Props {
+  pub: Pub;
+  /** Show the year in a left-hand gutter (home page, research pages). */
+  year?: boolean;
+}
+const { pub, year = false } = Astro.props;
+const d = pub.data;
+const authors = authorList(d);
+---
+
+<li class:list={['pub', { gutter: year }]} data-kind={isPaper(d) ? 'paper' : 'abstract'} data-themes={d.themes.join(' ')}>
+  {year && <span class="yr mono">{d.year}</span>}
+  <div>
+    <h3><a href={pubHref(pub.id)} set:html={inline(d.title)} /></h3>
+    <p class="au">
+      {
+        authors.map((a, i) => (
+          <>
+            {a.self ? <b>{a.text}</b> : a.text}
+            {i < authors.length - 1 && ', '}
+          </>
+        ))
+      }
+      {d.contribution && <span class="contrib">. {d.contribution}</span>}
+    </p>
+    <p class="src">
+      <span set:html={source(d)} />
+      {d.doi && <a class="doi mono" href={doiUrl(d.doi)}>{d.doi}</a>}
+      {!d.doi && d.url && <a class="l" href={d.url}>Link</a>}
+      {d.pdf && <a class="l" href={d.pdf}>PDF</a>}
+    </p>
+  </div>
+</li>
+
+<style>
+  .pub { padding: 18px 0; border-top: 1px solid var(--rule); }
+  .pub.gutter { display: grid; grid-template-columns: 64px 1fr; gap: 0 24px; }
+  .yr { font-size: 15px; font-weight: 500; color: var(--blue); padding-top: 2px; }
+  h3 { margin: 0 0 6px; font-size: 18px; font-weight: 600; line-height: 1.35; letter-spacing: -0.005em; }
+  h3 a { text-decoration: none; }
+  h3 a:hover { text-decoration: underline; text-decoration-thickness: 1.5px; text-underline-offset: 3px; }
+  .au { margin: 0 0 6px; font-size: 14.5px; color: var(--muted); }
+  .au b { color: var(--ink); font-weight: 700; }
+  .src { margin: 0; font-size: 14px; display: flex; flex-wrap: wrap; gap: 4px 18px; align-items: baseline; }
+  .doi { font-size: 12.5px; color: var(--muted); text-decoration: none; overflow-wrap: anywhere; }
+  .doi:hover { color: var(--blue); text-decoration: underline; }
+  .l { font-weight: 700; font-size: 13px; text-decoration: none; color: var(--blue); }
+  .l:hover { text-decoration: underline; }
+  @media (max-width: 600px) {
+    .pub.gutter { grid-template-columns: 1fr; }
+    .yr { margin-bottom: 4px; }
+    h3 { font-size: 17px; }
+  }
+</style>

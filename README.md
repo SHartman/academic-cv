@@ -1,44 +1,64 @@
-<p align="center"><a href="https://wowchemy.com" target="_blank" rel="noopener"><img src="https://wowchemy.com/img/logo_200px.png" alt="Wowchemy Website Builder"></a></p>
+# scotthartman.info
 
-# Academic Template for [Hugo](https://github.com/gohugoio/hugo)
+Academic website of Scott Hartman: paleobiologist and vertebrate paleontologist,
+Department of Biology, University of Wisconsin–Madison.
 
-The Hugo **Academic Resumé Template** empowers you to create your job-winning online resumé and showcase your academic publications.
+Built with [Astro](https://astro.build) and deployed on Cloudflare. Skeletal reconstructions
+and paleoart live at the sister site, [skeletaldrawing.com](https://www.skeletaldrawing.com).
 
-[Check out the latest demo](https://academic-demo.netlify.app/) of what you'll get in less than 10 minutes, or [view the showcase](https://wowchemy.com/user-stories/).
+**To update content, see [EDITING.md](EDITING.md).**
 
-[**Wowchemy**](https://wowchemy.com) makes it easy to create a beautiful website for free. Edit your site in Markdown, Jupyter, or RStudio (via Blogdown), generate it with Hugo, and deploy with GitHub or Netlify. Customize anything on your site with widgets, themes, and language packs.
+## Layout
 
-- 👉 [**Get Started**](https://wowchemy.com/templates/)
-- 📚 [View the **documentation**](https://wowchemy.com/docs/)
-- 💬 [Chat with the **Wowchemy community**](https://discord.gg/z8wNYzb) or [**Hugo community**](https://discourse.gohugo.io)
-- 🐦 Twitter: [@wowchemy](https://twitter.com/wowchemy) [@GeorgeCushen](https://twitter.com/GeorgeCushen) [#MadeWithWowchemy](https://twitter.com/search?q=(%23MadeWithWowchemy%20OR%20%23MadeWithAcademic)&src=typed_query)
-- 💡 [Request a **feature** or report a **bug** for _Wowchemy_](https://github.com/wowchemy/wowchemy-hugo-modules/issues)
-- ⬆️ **Updating Wowchemy?** View the [Update Guide](https://wowchemy.com/docs/guide/update/) and [Release Notes](https://wowchemy.com/updates/)
+```
+src/
+  data/
+    site.yaml              name, titles, links, section switches
+    publications.yaml      every paper / chapter / book / thesis / abstract
+    news.yaml              dated news items
+  content/
+    research/*.md          the three research areas
+    pages/about.md         bio and education
+    software/*.md          research tools (section off until a tool is public)
+  assets/                  images (optimized at build time)
+    publications/<id>.*    optional figure for a publication page
+  components/              Cladogram, PubTimeline (the range chart), PubItem, …
+  pages/                   routes
+  lib/                     citation formatting, BibTeX, site settings loader
+wrangler.jsonc             Cloudflare deployment config
+public/
+  cv.pdf                   linked from the nav
+  _redirects               old Wowchemy URLs → new pages
+scripts/                   add-paper (from a DOI) and add-talk (guided) helpers
+```
 
-## Crowd-funded open-source software
+## Commands
 
-To help us develop this template and software sustainably under the MIT license, we ask all individuals and businesses that use it to help support its ongoing maintenance and development via sponsorship.
+| Command | |
+|---|---|
+| `npm install` | once per machine |
+| `npm run dev` | local preview at http://localhost:4321 |
+| `npm run build` | production build into `dist/` |
+| `npm run check` | type-check |
+| `npm run add-paper -- <DOI>` | add a publication from Crossref |
+| `npm run add-talk` | add a talk or poster (guided questions) |
 
-### [❤️ Click here to unlock rewards with sponsorship](https://wowchemy.com/plans/)
+## Deploying (Cloudflare)
 
-## Ecosystem
+The site deploys as a static-assets Worker (config in `wrangler.jsonc`). In the Cloudflare
+dashboard: Workers & Pages → Create → import this GitHub repository, then set:
 
-* **[Hugo Academic CLI](https://github.com/wowchemy/hugo-academic-cli):** Automatically import publications from BibTeX
+- Project name: **academic-cv** (must match `name` in `wrangler.jsonc`)
+- Build command: `npm run build`
+- Deploy command: `npx wrangler deploy` (the default)
 
-[![Screenshot](https://raw.githubusercontent.com/wowchemy/wowchemy-hugo-modules/master/academic.png)](https://wowchemy.com)
+Node version comes from `.node-version`. Every push to the production branch rebuilds the
+site; other branches get preview builds. `npx wrangler dev` serves `dist/` locally exactly
+as Cloudflare will, including the redirects in `public/_redirects`.
 
-## Demo image credits
+## Design
 
-- [Open book](https://unsplash.com/photos/J4kK8b9Fgj8)
-- [Course](https://unsplash.com/photos/JKUTrJ4vK00)
-
-## Latest news
-<!--START_SECTION:news-->
-* [Hugo vs Quarto: Which One is Better for 2023?](https:&#x2F;&#x2F;hugoblox.com&#x2F;blog&#x2F;hugo-vs-quarto&#x2F;)
-* [Easily make an academic CV website to get more cites and grow your audience 🚀](https:&#x2F;&#x2F;hugoblox.com&#x2F;blog&#x2F;easily-make-academic-website&#x2F;)
-* [What&#39;s new in v5.2?](https:&#x2F;&#x2F;hugoblox.com&#x2F;blog&#x2F;whats-new-in-v5.2&#x2F;)
-* [What&#39;s new in v5.1?](https:&#x2F;&#x2F;hugoblox.com&#x2F;blog&#x2F;whats-new-in-v5.1&#x2F;)
-* [Version 5.0 (February 2021)](https:&#x2F;&#x2F;hugoblox.com&#x2F;blog&#x2F;version-5.0-february-2021&#x2F;)
-<!--END_SECTION:news-->
-
-[![Analytics](https://ga-beacon.appspot.com/UA-78646709-2/starter-academic/readme?pixel)](https://github.com/igrigorik/ga-beacon)
+"Cladogram": Chivo and Chivo Mono (self-hosted), black ink on white, with the avialan blue
+(`#1f4fd8`) and volant-taxon red (`#c62a1f`) taken from the paravian phylogeny figures.
+The home-page tree's tips are research areas, and the publication record is drawn as a
+time-calibrated range chart (filled = paper, outlined = abstract, blue = selected).

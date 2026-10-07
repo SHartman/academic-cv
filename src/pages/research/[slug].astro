@@ -1,0 +1,58 @@
+---
+import { Image } from 'astro:assets';
+import { getCollection, render, type CollectionEntry } from 'astro:content';
+import Base from '../../layouts/Base.astro';
+import PubItem from '../../components/PubItem.astro';
+import { allPubs, inline, isPaper } from '../../lib/pubs';
+
+export async function getStaticPaths() {
+  const themes = await getCollection('research');
+  return themes.map((theme) => ({ params: { slug: theme.id }, props: { theme } }));
+}
+
+const { theme } = Astro.props as { theme: CollectionEntry<'research'> };
+const { Content } = await render(theme);
+const related = (await allPubs()).filter((p) => p.data.themes.includes(theme.id as (typeof p.data.themes)[number]));
+const papers = related.filter((p) => isPaper(p.data));
+const abstracts = related.filter((p) => !isPaper(p.data));
+---
+
+<Base title={theme.data.title} description={theme.data.summary} image={theme.data.image}>
+  <header class="page-head">
+    <a class="crumb" href="/research/">← Research</a>
+    <h1 class:list={[theme.data.color]}>{theme.data.title}</h1>
+    <p class="lede" set:html={inline(theme.data.summary)} />
+  </header>
+
+  <div class="layout">
+    <figure class="fig lead">
+      <Image src={theme.data.image} alt={theme.data.imageAlt} widths={[600, 1000, 1400]} sizes="(max-width: 900px) 100vw, 1136px" />
+      {theme.data.caption && <figcaption set:html={inline(theme.data.caption)} />}
+    </figure>
+    <div class="prose"><Content /></div>
+  </div>
+
+  {
+    papers.length > 0 && (
+      <section class="block">
+        <h2 class:list={['sec', theme.data.color]}>Papers</h2>
+        <ol class="plain">{papers.map((p) => <PubItem pub={p} year />)}</ol>
+      </section>
+    )
+  }
+  {
+    abstracts.length > 0 && (
+      <section class="block">
+        <h2 class="sec">Conference abstracts &amp; talks</h2>
+        <ol class="plain">{abstracts.map((p) => <PubItem pub={p} year />)}</ol>
+      </section>
+    )
+  }
+</Base>
+
+<style>
+  h1.red { color: var(--ink); box-shadow: inset 0 -0.12em 0 var(--red); display: inline; }
+  .layout { display: grid; gap: 48px; }
+  .lead :global(img) { width: 100%; max-height: 560px; object-fit: contain; padding: 12px; }
+  ol.plain { list-style: none; margin: 0; padding: 0; }
+</style>

@@ -1,0 +1,15 @@
+---
+import { getCollection } from 'astro:content';
+import Base from '../../layouts/Base.astro';
+import ThemeCards from '../../components/ThemeCards.astro';
+
+const themes = (await getCollection('research')).sort((a, b) => a.data.order - b.data.order);
+---
+
+<Base title="Research" description="Research areas of Scott Hartman: the origin of avian flight, physiological modeling of extinct vertebrates, and functional anatomy.">
+  <header class="page-head">
+    <h1>Research</h1>
+    <p class="lede">How vertebrates work, approached from three directions that keep feeding into one another.</p>
+  </header>
+  <ThemeCards themes={themes} />
+</Base>
