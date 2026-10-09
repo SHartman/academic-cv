@@ -25,13 +25,11 @@ The full list of credits is at [skeletaldrawing.com](https://www.skeletaldrawing
 
 ## Grants & awards
 
-- **2024–25** UW–Madison Instructional Laboratory Modernization grant, to modernize the teaching labs in Noland 315 and 321
-- **2020–21** UW–Madison Instructional Laboratory Modernization grant, for the ZOO 430/612 lab in Noland 321
+Teaching grants and awards are on the [Teaching](/teaching/) page.
+
 - **2020** C.F. Schiesser Outstanding Student Research Paper Award, Department of Geoscience, UW–Madison, for [Hartman et al. 2019](/publications/hartman-2019-new/)
 - **2018** George J. Verville Award in Geology and Geophysics, UW–Madison
-- **2017** L&S Teaching Fellow, College of Letters & Science, UW–Madison
 - **2016** Experiment.com crowdfunding for "Describing a Jurassic maniraptoran dinosaur from the Morrison Formation of North America"
-- **2015** Communication-B Teaching Assistant Fellow, UW–Madison
 - **2004** Jurassic Foundation grant, for CT scanning a new Jurassic coelurosaur
 - **2001–02** B.O.C.E.S. grants, for a human evolution display and a reverse-classroom human origins course
 - **2000** Wyoming Geological Association travel grant

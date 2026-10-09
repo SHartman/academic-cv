@@ -14,6 +14,9 @@ and field, and the live site stays as it was.
 | Post news | `src/data/news.yaml` |
 | Change my title, links, or home-page statement | `src/data/site.yaml` |
 | Update the bio / education | `src/content/pages/about.md` |
+| Add or edit a course | `src/data/courses.yaml` |
+| Edit the teaching intro | `src/content/pages/teaching.md` |
+| Add teaching projects or awards | `src/content/pages/teaching-record.md` |
 | Rewrite a research area | `src/content/research/<flight\|physiology\|anatomy>.md` |
 | Replace the CV | overwrite `public/cv.pdf` |
 | Add a figure to a paper's page | drop `<id>.jpg` or `.png` into `src/assets/publications/`, add `caption:` |

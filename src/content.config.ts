@@ -102,9 +102,23 @@ const software = defineCollection({
   }),
 });
 
+const courses = defineCollection({
+  loader: file('src/data/courses.yaml'),
+  schema: z.object({
+    number: z.string(),
+    title: z.string(),
+    group: z.enum(['intro', 'advanced']),
+    credits: z.number().optional(),
+    offered: z.array(z.object({ term: z.enum(['fall', 'spring', 'summer']), online: z.boolean().default(false) })).min(1),
+    prerequisites: z.string().optional(),
+    description: z.string(),
+    note: z.string().optional(),
+  }),
+});
+
 const pages = defineCollection({
   loader: glob({ pattern: '**/[^_]*.md', base: './src/content/pages' }),
   schema: z.object({ title: z.string() }),
 });
 
-export const collections = { publications, news, research, software, pages };
+export const collections = { publications, news, research, software, courses, pages };

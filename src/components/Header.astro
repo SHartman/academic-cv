@@ -4,8 +4,8 @@ import { site } from '../lib/site';
 const nav = [
   { href: '/research/', label: 'Research' },
   { href: '/publications/', label: 'Publications' },
+  { href: '/teaching/', label: 'Teaching' },
   ...(site.features.software ? [{ href: '/software/', label: 'Software' }] : []),
-  { href: '/news/', label: 'News' },
   { href: '/about/', label: 'About' },
 ];
 const here = Astro.url.pathname;
@@ -44,11 +44,12 @@ const here = Astro.url.pathname;
 
   @media (max-width: 760px) {
     .bar { padding-top: 16px; padding-bottom: 12px; min-height: 0; }
+    /* One line on typical phones; wraps (rather than scrolls) on very narrow ones,
+       so every link stays visible. */
     nav {
-      width: 100%; gap: 20px; overflow-x: auto; scrollbar-width: none;
+      width: 100%; flex-wrap: wrap; gap: 6px 12px; font-size: 14px;
       padding-top: 10px; border-top: 1px solid var(--rule);
     }
-    nav::-webkit-scrollbar { display: none; }
     nav a { white-space: nowrap; }
   }
 </style>

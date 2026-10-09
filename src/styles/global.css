@@ -82,6 +82,14 @@ a { color: inherit; }
 .prose a:hover { text-decoration-thickness: 2px; }
 .prose ul { padding-left: 1.2em; margin: 0 0 1.1em; }
 .prose li { margin-bottom: 0.35em; }
+/* Dated lists in Markdown, "- **2020** Text": a mono year column with a hanging indent. */
+.prose ul:has(> li > strong:first-child) { list-style: none; padding-left: 0; }
+.prose li:has(> strong:first-child) { padding-left: 5.4em; text-indent: -5.4em; }
+.prose li:has(> strong:first-child) > strong:first-child {
+  /* minus ~one space, so first and wrapped lines align */
+  display: inline-block; width: calc((5.4em - 0.26em) / 0.82); text-indent: 0;
+  font-family: var(--mono); font-size: 0.82em; font-weight: 500; color: var(--blue);
+}
 .prose figure { margin: 2em 0; }
 .prose img { border: 1px solid var(--rule); background: #fff; }
 .prose figcaption { color: var(--muted); font-size: 14.5px; line-height: 1.45; margin-top: 10px; }

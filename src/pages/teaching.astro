@@ -1,0 +1,103 @@
+---
+import { getCollection, getEntry, render } from 'astro:content';
+import Base from '../layouts/Base.astro';
+import { inline } from '../lib/pubs';
+import { site } from '../lib/site';
+
+const intro = (await getEntry('pages', 'teaching'))!;
+const record = (await getEntry('pages', 'teaching-record'))!;
+const { Content: Intro } = await render(intro);
+const { Content: Record } = await render(record);
+
+// File order is display order within each group.
+const courses = await getCollection('courses');
+const groups = [
+  { key: 'intro', title: 'Open to all students', lede: 'No prerequisites; they count toward the biological science breadth requirement.' },
+  { key: 'advanced', title: 'Advanced courses for majors', lede: 'Building on introductory zoology.' },
+] as const;
+const TERM = { fall: 'Fall', spring: 'Spring', summer: 'Summer' } as const;
+---
+
+<Base
+  title="Teaching"
+  description={`Courses taught by ${site.name} at the University of Wisconsin–Madison: dinosaurs, ecology, biology in popular media, comparative vertebrate anatomy, and comparative physiology.`}
+>
+  <header class="page-head">
+    <h1>Teaching</h1>
+    <p class="lede">{site.position}, {site.department}, {site.institution}.</p>
+  </header>
+
+  <div class="prose intro"><Intro /></div>
+
+  {
+    groups.map((g) => (
+      <section class="block">
+        <h2 class="sec">{g.title}</h2>
+        <p class="group-lede">{g.lede}</p>
+        <ul class="courses">
+          {courses
+            .filter((c) => c.data.group === g.key)
+            .map(({ data: c }) => (
+              <li class="course">
+                <span class="num mono">{c.number}</span>
+                <div>
+                  <h3 set:html={inline(c.title)} />
+                  <p class="tags">
+                    {c.offered.map((o) => (
+                      <span class:list={['tag', { online: o.online }]}>
+                        {TERM[o.term]}
+                        {o.online && ' · online'}
+                      </span>
+                    ))}
+                    {c.credits && <span class="meta">{c.credits} credits</span>}
+                    {c.prerequisites && c.prerequisites !== 'None' && <span class="meta">Prerequisite: {c.prerequisites}</span>}
+                  </p>
+                  <p class="desc" set:html={inline(c.description)} />
+                  {c.note && <p class="note" set:html={inline(c.note)} />}
+                </div>
+              </li>
+            ))}
+        </ul>
+      </section>
+    ))
+  }
+
+  <section class="block">
+    <div class="prose record"><Record /></div>
+  </section>
+</Base>
+
+<style>
+  .intro { margin-bottom: 8px; }
+  .group-lede { margin: -16px 0 8px; font-size: 15px; color: var(--muted); }
+  .courses { list-style: none; margin: 0; padding: 0; }
+  .course { display: grid; grid-template-columns: 96px 1fr; gap: 0 24px; padding: 20px 0; border-top: 1px solid var(--rule); }
+  .course:first-child { border-top: 0; }
+  .num { font-size: 15px; font-weight: 500; color: var(--blue); padding-top: 3px; white-space: nowrap; }
+  h3 { margin: 0 0 8px; font-size: 19px; font-weight: 700; letter-spacing: -0.01em; line-height: 1.3; }
+  .tags { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 10px; margin: 0 0 10px; }
+  .tag { font-size: 12.5px; font-weight: 600; padding: 3px 8px; border: 1.5px solid var(--ink); line-height: 1.2; }
+  .tag.online { border-color: var(--blue); color: var(--blue); }
+  .meta { font-size: 13px; color: var(--muted); }
+  .desc { margin: 0; font-size: 16px; line-height: 1.55; max-width: 44em; }
+  .note { margin: 8px 0 0; font-size: 14.5px; color: var(--muted); }
+  .note :global(strong) { color: var(--ink); font-weight: 600; }
+  /* The record's Markdown headings get the same node-and-branch treatment as .sec. */
+  .record { max-width: none; }
+  .record :global(h2) {
+    display: flex; align-items: center; gap: 14px; margin: 0 0 24px;
+    font-size: 26px; font-weight: 800; letter-spacing: -0.02em; line-height: 1.2;
+  }
+  .record :global(h2)::before { content: ''; width: 12px; height: 12px; background: var(--ink); flex: none; }
+  .record :global(h2)::after { content: ''; height: var(--branch); background: var(--ink); flex: 1; min-width: 24px; }
+  .record :global(h2 ~ h2) { margin-top: 64px; }
+  .record :global(ul) { max-width: 46em; }
+  @media (max-width: 700px) {
+    .record :global(h2) { font-size: 22px; gap: 10px; }
+    .record :global(h2)::before { width: 10px; height: 10px; }
+  }
+  @media (max-width: 600px) {
+    .course { grid-template-columns: 1fr; }
+    .num { margin-bottom: 4px; }
+  }
+</style>

@@ -1,0 +1,101 @@
+# ─────────────────────────────────────────────────────────────────────────────
+# COURSES — shown on the Teaching page, in this order within each group.
+#
+#   - id: zoo-275                       # unique, lowercase
+#     number: ZOO 275
+#     title: Biology of the Dinosaurs
+#     group: intro                      # intro (open to all) | advanced (for majors)
+#     credits: 3                        # optional
+#     offered:                          # one line per version of the course
+#       - { term: fall }                # term: fall | spring | summer
+#       - { term: summer, online: true }
+#     prerequisites: None               # optional; written as it should read after "Prerequisite:"
+#     description: >-
+#       Two or three sentences. *Asterisks* for italics.
+#     note: Optional extra line (e.g. a paired lab).
+#
+# Keep descriptions general enough that they don't need updating every term;
+# dates, rooms and policies belong in each semester's syllabus.
+# ─────────────────────────────────────────────────────────────────────────────
+
+- id: zoo-110
+  number: ZOO 110
+  title: "Biology in Popular Media: Fact or Fiction?"
+  group: intro
+  credits: 3
+  offered:
+    - { term: spring }
+  prerequisites: None
+  description: >-
+    Introductory biology, and science as a process, taught through movies, television, and
+    documentaries: how biology and biologists are portrayed, which common tropes hold up,
+    and how those depictions shape the public's understanding of science.
+
+- id: zoo-260
+  number: ZOO 260
+  title: Introductory Ecology
+  group: intro
+  credits: 3
+  offered:
+    - { term: summer, online: true }
+  prerequisites: None
+  description: >-
+    The fundamental concepts of ecology: how organisms interact with each other and with
+    their environment, with an emphasis on current environmental issues and on evolution as
+    the driver of the biological diversity around us.
+
+- id: zoo-275
+  number: ZOO 275
+  title: Biology of the Dinosaurs
+  group: intro
+  credits: 3
+  offered:
+    - { term: fall }
+    - { term: summer, online: true }
+  prerequisites: None
+  description: >-
+    The biology, ecology, and evolution of dinosaurs. We examine how dinosaurs lived and their
+    major evolutionary transitions, from predator–prey interactions to the origin of flight.
+    We also look at how they died, and how Mesozoic ecology gave rise to modern ecosystems.
+  note: An honors option (fall) adds a research paper and a student-led discussion.
+
+- id: zoo-430
+  number: ZOO 430
+  title: Comparative Anatomy of the Vertebrates
+  group: advanced
+  credits: 5
+  offered:
+    - { term: fall }
+  prerequisites: introductory zoology
+  description: >-
+    The vertebrate body, system by system, and how it varies, approached through function,
+    embryology, and evolution. Lectures are paired with a dissection lab working through
+    representative vertebrates.
+
+- id: zoo-611
+  number: ZOO 611
+  title: Comparative & Evolutionary Physiology
+  group: advanced
+  credits: 3
+  offered:
+    - { term: spring }
+  prerequisites: introductory zoology
+  description: >-
+    General physiological principles, compared across lineages with very different
+    evolutionary histories and ecologies: adaptation to salinity, temperature, altitude,
+    pressure, and pollution, and how nervous and endocrine systems evolved to support those
+    adaptations. Includes weekly journal articles and seminar-style, student-led discussion.
+
+- id: zoo-612
+  number: ZOO 612
+  title: Comparative & Evolutionary Physiology Lab
+  group: advanced
+  credits: 2
+  offered:
+    - { term: spring }
+  prerequisites: ZOO 611, taken before or alongside
+  description: >-
+    An optional research capstone, usually taken by seniors. Working in groups, students
+    investigate physiological adaptations in invertebrate animals by designing and running
+    their own experiments, analyzing the data in R, and presenting the results in a research
+    paper and an oral presentation.
